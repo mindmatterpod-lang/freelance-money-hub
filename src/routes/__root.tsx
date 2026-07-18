@@ -83,6 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Price your work, estimate taxes, and manage cash flow with free calculators built for freelancers worldwide." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "google-site-verification", content: "JabNucFR2y2UDb547dLKgD0biq56WoR-IMVhH9mgZrY" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
