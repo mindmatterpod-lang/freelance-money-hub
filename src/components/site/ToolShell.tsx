@@ -148,6 +148,7 @@ export function ToolShell({ toolKey, h1, tagline, intro, calculator, works, why,
             ))}
           </div>
         </section>
+        <EmailCapture />
       </main>
       <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
