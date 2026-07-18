@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
+import { EmailCapture } from "./EmailCapture";
 
 export const ALL_TOOLS = [
   { to: "/tools/freelance-hourly-rate-calculator", title: "Freelance Hourly Rate Calculator", blurb: "Turn your target income into a rate that actually covers your business." },
@@ -147,6 +148,7 @@ export function ToolShell({ toolKey, h1, tagline, intro, calculator, works, why,
             ))}
           </div>
         </section>
+        <EmailCapture />
       </main>
       <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
