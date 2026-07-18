@@ -2,8 +2,9 @@ import { useState } from "react";
 import { CheckCircle2, Mail, Sparkles } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 
-export function EmailCapture() {
+export function EmailCapture({ source }: { source?: string } = {}) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState("");
