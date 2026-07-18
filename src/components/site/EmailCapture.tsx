@@ -2,8 +2,9 @@ import { useState } from "react";
 import { CheckCircle2, Mail, Sparkles } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 
-export function EmailCapture() {
+export function EmailCapture({ source }: { source?: string } = {}) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState("");
@@ -19,12 +20,13 @@ export function EmailCapture() {
     setStatus("loading");
     setError("");
     try {
-      // Local list until backend is wired up
-      const key = "freelancerate:subscribers";
-      const existing: string[] = JSON.parse(localStorage.getItem(key) || "[]");
-      if (!existing.includes(value)) existing.push(value);
-      localStorage.setItem(key, JSON.stringify(existing));
-      await new Promise((r) => setTimeout(r, 400));
+      const { error: insertError } = await supabase
+        .from("subscribers")
+        .insert({ email: value, source: source ?? (typeof window !== "undefined" ? window.location.pathname : null) });
+      if (insertError && insertError.code !== "23505") {
+        // 23505 = unique violation → treat as already subscribed / success
+        throw insertError;
+      }
       setStatus("success");
       setEmail("");
     } catch {
