@@ -99,21 +99,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+function GoogleAnalytics() {
+  return (
+    <>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-M5M8NG0QVJ"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html:
+            "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-M5M8NG0QVJ');",
+        }}
+      ></script>
+    </>
+  );
+}
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
         <HeadContent />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5M8NG0QVJ"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "window.dataLayer = window.dataLayer || [];" +
-              "function gtag(){dataLayer.push(arguments);}" +
-              "gtag('js', new Date());" +
-              "gtag('config', 'G-M5M8NG0QVJ');",
-          }}
-        />
+        <GoogleAnalytics />
       </head>
       <body>
         {children}
