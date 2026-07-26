@@ -77,13 +77,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "FreelanceRate — Free money tools for freelancers worldwide" },
-      { name: "description", content: "Free calculators for freelancers: hourly rate, project quotes, taxes, invoice late fees, currency-adjusted rates, and cash flow. No signup." },
-      { property: "og:title", content: "FreelanceRate — Free money tools for freelancers" },
-      { property: "og:description", content: "Price your work, estimate taxes, and manage cash flow with free calculators built for freelancers worldwide." },
-      { property: "og:type", content: "website" },
+      { title: "Freelance Money Hub | Learn Freelancing & Earn Online" },
+
+{
+  name: "description",
+  content:
+    "Freelance Money Hub helps freelancers learn freelancing, set rates, find clients, and earn money online with free tools and guides.",
+},
+
+{
+  property: "og:title",
+  content: "Freelance Money Hub",
+},
+
+{
+  property: "og:site_name",
+  content: "Freelance Money Hub",
+},
+
+{
+  property: "og:description",
+  content:
+    "Free tools and expert guides for freelancers worldwide.",
+},
+
+{
+  property: "og:type",
+  content: "website",
+},
+
+{
+  property: "og:url",
+  content: "https://freelance-money-hub.vercel.app",
+},
       { name: "twitter:card", content: "summary_large_image" },
       { name: "google-site-verification", content: "JabNucFR2y2UDb547dLKgD0biq56WoR-IMVhH9mgZrY" },
+      {
+  name: "application-name",
+  content: "Freelance Money Hub",
+},
+
+{
+  name: "apple-mobile-web-app-title",
+  content: "Freelance Money Hub",
+},
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -101,6 +138,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children:
           "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-M5M8NG0QVJ');",
       },
+      {
+  type: "application/ld+json",
+  children: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Freelance Money Hub",
+    url: "https://freelance-money-hub.vercel.app",
+    description:
+      "Free tools and guides to help freelancers earn more and grow their business.",
+    inLanguage: "en",
+  }),
+},
     ],
   }),
   shellComponent: RootShell,
