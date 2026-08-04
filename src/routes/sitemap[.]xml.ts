@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { ALL_POSTS } from "@/components/site/BlogShell";
 
 const BASE_URL = "https://freelance-money-hub.vercel.app";
 
