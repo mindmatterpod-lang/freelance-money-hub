@@ -11,7 +11,17 @@ const tools = [
   { to: "/tools/annual-income-to-hourly-rate-calculator", label: "Salary → Hourly" },
   { to: "/tools/freelance-profit-margin-calculator", label: "Profit Margin" },
   { to: "/tools/days-to-invoice-payment-calculator", label: "Cash Flow" },
+  { to: "/tools/freelance-day-rate-calculator", label: "Day Rate" },
+  { to: "/tools/retainer-pricing-calculator", label: "Retainer Pricing" },
+  { to: "/tools/rate-increase-calculator", label: "Rate Increase" },
+  { to: "/tools/payment-processing-fee-calculator", label: "Payment Fees" },
+  { to: "/tools/vat-gst-invoice-calculator", label: "VAT / GST" },
+  { to: "/tools/scope-creep-cost-calculator", label: "Scope Creep" },
+  { to: "/tools/freelance-emergency-fund-calculator", label: "Emergency Fund" },
+  { to: "/tools/client-discount-calculator", label: "Discount Impact" },
+  { to: "/tools/billable-utilization-rate-calculator", label: "Utilization" },
 ] as const;
+
 
 export function Nav() {
   const [open, setOpen] = useState(false);

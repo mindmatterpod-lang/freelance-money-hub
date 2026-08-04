@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { ALL_POSTS } from "@/components/site/BlogShell";
 
 const BASE_URL = "https://freelance-money-hub.vercel.app";
 
@@ -23,14 +24,26 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/tools/annual-income-to-hourly-rate-calculator", changefreq: "monthly", priority: "0.9" },
           { path: "/tools/freelance-profit-margin-calculator", changefreq: "monthly", priority: "0.9" },
           { path: "/tools/days-to-invoice-payment-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/freelance-day-rate-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/retainer-pricing-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/rate-increase-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/payment-processing-fee-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/vat-gst-invoice-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/scope-creep-cost-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/freelance-emergency-fund-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/client-discount-calculator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/billable-utilization-rate-calculator", changefreq: "monthly", priority: "0.9" },
           { path: "/guides/how-to-set-your-freelance-rate", changefreq: "monthly", priority: "0.8" },
           { path: "/guides/how-to-invoice-international-clients", changefreq: "monthly", priority: "0.8" },
           { path: "/guides/freelance-tax-basics-by-country", changefreq: "monthly", priority: "0.8" },
           { path: "/guides/how-to-price-a-fixed-bid-project", changefreq: "monthly", priority: "0.8" },
+          { path: "/blog", changefreq: "weekly", priority: "0.8" },
+          ...ALL_POSTS.map((p) => ({ path: `/blog/${p.slug}`, changefreq: "monthly" as const, priority: "0.7" })),
           { path: "/about", changefreq: "monthly", priority: "0.5" },
           { path: "/contact", changefreq: "monthly", priority: "0.5" },
           { path: "/privacy-policy", changefreq: "monthly", priority: "0.3" },
           { path: "/terms", changefreq: "monthly", priority: "0.3" },
+
         ];
 
         const urls = entries.map((e) =>

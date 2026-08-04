@@ -14,7 +14,17 @@ export const ALL_TOOLS = [
   { to: "/tools/annual-income-to-hourly-rate-calculator", title: "Salary → Freelance Hourly", blurb: "The hourly rate that actually matches your old day job salary." },
   { to: "/tools/freelance-profit-margin-calculator", title: "Freelance Profit Margin", blurb: "Gross margin, net margin, and break-even project count." },
   { to: "/tools/days-to-invoice-payment-calculator", title: "Cash Flow / Payment Date", blurb: "When each invoice actually lands, with overlap warnings." },
+  { to: "/tools/freelance-day-rate-calculator", title: "Freelance Day Rate Calculator", blurb: "Convert your hourly rate into a defensible day rate." },
+  { to: "/tools/retainer-pricing-calculator", title: "Monthly Retainer Calculator", blurb: "Price a retainer with the right hour block and discount." },
+  { to: "/tools/rate-increase-calculator", title: "Rate Increase Calculator", blurb: "See the income impact of raising rates — even if clients leave." },
+  { to: "/tools/payment-processing-fee-calculator", title: "Payment Fee Calculator", blurb: "What PayPal, Wise, Stripe and Payoneer really cost you." },
+  { to: "/tools/vat-gst-invoice-calculator", title: "VAT / GST Invoice Calculator", blurb: "Add or strip VAT/GST and get a clean invoice breakdown." },
+  { to: "/tools/scope-creep-cost-calculator", title: "Scope Creep Cost Calculator", blurb: "Price the 'quick extra' before you agree to it." },
+  { to: "/tools/freelance-emergency-fund-calculator", title: "Emergency Fund Calculator", blurb: "How much runway you need before slow months hurt." },
+  { to: "/tools/client-discount-calculator", title: "Discount Impact Calculator", blurb: "How many extra hours a 'small' discount really costs." },
+  { to: "/tools/billable-utilization-rate-calculator", title: "Billable Utilization Calculator", blurb: "What share of your week is actually earning money." },
 ] as const;
+
 
 export type ToolKey = (typeof ALL_TOOLS)[number]["to"];
 

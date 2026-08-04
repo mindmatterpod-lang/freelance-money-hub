@@ -24,7 +24,12 @@ export function Footer() {
             <li><Link to="/tools/invoice-late-fee-calculator" className="hover:text-foreground">Late fees</Link></li>
             <li><Link to="/tools/self-employment-tax-estimator" className="hover:text-foreground">Tax estimator</Link></li>
             <li><Link to="/tools/currency-adjusted-rate-calculator" className="hover:text-foreground">Currency rate</Link></li>
+            <li><Link to="/tools/freelance-day-rate-calculator" className="hover:text-foreground">Day rate</Link></li>
+            <li><Link to="/tools/retainer-pricing-calculator" className="hover:text-foreground">Retainer pricing</Link></li>
+            <li><Link to="/tools/payment-processing-fee-calculator" className="hover:text-foreground">Payment fees</Link></li>
+            <li><Link to="/tools/vat-gst-invoice-calculator" className="hover:text-foreground">VAT / GST</Link></li>
           </ul>
+
         </div>
         <div>
           <h4 className="text-sm font-semibold">Guides</h4>
@@ -33,7 +38,9 @@ export function Footer() {
             <li><Link to="/guides/how-to-invoice-international-clients" className="hover:text-foreground">Invoicing internationally</Link></li>
             <li><Link to="/guides/freelance-tax-basics-by-country" className="hover:text-foreground">Tax basics by country</Link></li>
             <li><Link to="/guides/how-to-price-a-fixed-bid-project" className="hover:text-foreground">Fixed-bid pricing</Link></li>
+            <li><Link to="/blog" className="hover:text-foreground">Blog</Link></li>
           </ul>
+
         </div>
         <div>
           <h4 className="text-sm font-semibold">Company</h4>

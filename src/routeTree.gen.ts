@@ -15,18 +15,29 @@ import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as ToolsVatGstInvoiceCalculatorRouteImport } from './routes/tools.vat-gst-invoice-calculator'
 import { Route as ToolsSelfEmploymentTaxEstimatorRouteImport } from './routes/tools.self-employment-tax-estimator'
+import { Route as ToolsScopeCreepCostCalculatorRouteImport } from './routes/tools.scope-creep-cost-calculator'
+import { Route as ToolsRetainerPricingCalculatorRouteImport } from './routes/tools.retainer-pricing-calculator'
+import { Route as ToolsRateIncreaseCalculatorRouteImport } from './routes/tools.rate-increase-calculator'
 import { Route as ToolsProjectQuoteCalculatorRouteImport } from './routes/tools.project-quote-calculator'
+import { Route as ToolsPaymentProcessingFeeCalculatorRouteImport } from './routes/tools.payment-processing-fee-calculator'
 import { Route as ToolsInvoiceLateFeeCalculatorRouteImport } from './routes/tools.invoice-late-fee-calculator'
 import { Route as ToolsFreelanceProfitMarginCalculatorRouteImport } from './routes/tools.freelance-profit-margin-calculator'
 import { Route as ToolsFreelanceHourlyRateCalculatorRouteImport } from './routes/tools.freelance-hourly-rate-calculator'
+import { Route as ToolsFreelanceEmergencyFundCalculatorRouteImport } from './routes/tools.freelance-emergency-fund-calculator'
+import { Route as ToolsFreelanceDayRateCalculatorRouteImport } from './routes/tools.freelance-day-rate-calculator'
 import { Route as ToolsDaysToInvoicePaymentCalculatorRouteImport } from './routes/tools.days-to-invoice-payment-calculator'
 import { Route as ToolsCurrencyAdjustedRateCalculatorRouteImport } from './routes/tools.currency-adjusted-rate-calculator'
+import { Route as ToolsClientDiscountCalculatorRouteImport } from './routes/tools.client-discount-calculator'
+import { Route as ToolsBillableUtilizationRateCalculatorRouteImport } from './routes/tools.billable-utilization-rate-calculator'
 import { Route as ToolsAnnualIncomeToHourlyRateCalculatorRouteImport } from './routes/tools.annual-income-to-hourly-rate-calculator'
 import { Route as GuidesHowToSetYourFreelanceRateRouteImport } from './routes/guides.how-to-set-your-freelance-rate'
 import { Route as GuidesHowToPriceAFixedBidProjectRouteImport } from './routes/guides.how-to-price-a-fixed-bid-project'
 import { Route as GuidesHowToInvoiceInternationalClientsRouteImport } from './routes/guides.how-to-invoice-international-clients'
 import { Route as GuidesFreelanceTaxBasicsByCountryRouteImport } from './routes/guides.freelance-tax-basics-by-country'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -58,16 +69,51 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsVatGstInvoiceCalculatorRoute =
+  ToolsVatGstInvoiceCalculatorRouteImport.update({
+    id: '/tools/vat-gst-invoice-calculator',
+    path: '/tools/vat-gst-invoice-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ToolsSelfEmploymentTaxEstimatorRoute =
   ToolsSelfEmploymentTaxEstimatorRouteImport.update({
     id: '/tools/self-employment-tax-estimator',
     path: '/tools/self-employment-tax-estimator',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ToolsScopeCreepCostCalculatorRoute =
+  ToolsScopeCreepCostCalculatorRouteImport.update({
+    id: '/tools/scope-creep-cost-calculator',
+    path: '/tools/scope-creep-cost-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsRetainerPricingCalculatorRoute =
+  ToolsRetainerPricingCalculatorRouteImport.update({
+    id: '/tools/retainer-pricing-calculator',
+    path: '/tools/retainer-pricing-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsRateIncreaseCalculatorRoute =
+  ToolsRateIncreaseCalculatorRouteImport.update({
+    id: '/tools/rate-increase-calculator',
+    path: '/tools/rate-increase-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ToolsProjectQuoteCalculatorRoute =
   ToolsProjectQuoteCalculatorRouteImport.update({
     id: '/tools/project-quote-calculator',
     path: '/tools/project-quote-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsPaymentProcessingFeeCalculatorRoute =
+  ToolsPaymentProcessingFeeCalculatorRouteImport.update({
+    id: '/tools/payment-processing-fee-calculator',
+    path: '/tools/payment-processing-fee-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ToolsInvoiceLateFeeCalculatorRoute =
@@ -88,6 +134,18 @@ const ToolsFreelanceHourlyRateCalculatorRoute =
     path: '/tools/freelance-hourly-rate-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ToolsFreelanceEmergencyFundCalculatorRoute =
+  ToolsFreelanceEmergencyFundCalculatorRouteImport.update({
+    id: '/tools/freelance-emergency-fund-calculator',
+    path: '/tools/freelance-emergency-fund-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsFreelanceDayRateCalculatorRoute =
+  ToolsFreelanceDayRateCalculatorRouteImport.update({
+    id: '/tools/freelance-day-rate-calculator',
+    path: '/tools/freelance-day-rate-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ToolsDaysToInvoicePaymentCalculatorRoute =
   ToolsDaysToInvoicePaymentCalculatorRouteImport.update({
     id: '/tools/days-to-invoice-payment-calculator',
@@ -98,6 +156,18 @@ const ToolsCurrencyAdjustedRateCalculatorRoute =
   ToolsCurrencyAdjustedRateCalculatorRouteImport.update({
     id: '/tools/currency-adjusted-rate-calculator',
     path: '/tools/currency-adjusted-rate-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsClientDiscountCalculatorRoute =
+  ToolsClientDiscountCalculatorRouteImport.update({
+    id: '/tools/client-discount-calculator',
+    path: '/tools/client-discount-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsBillableUtilizationRateCalculatorRoute =
+  ToolsBillableUtilizationRateCalculatorRouteImport.update({
+    id: '/tools/billable-utilization-rate-calculator',
+    path: '/tools/billable-utilization-rate-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ToolsAnnualIncomeToHourlyRateCalculatorRoute =
@@ -130,6 +200,11 @@ const GuidesFreelanceTaxBasicsByCountryRoute =
     path: '/guides/freelance-tax-basics-by-country',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -138,18 +213,29 @@ export interface FileRoutesByFullPath {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/guides/freelance-tax-basics-by-country': typeof GuidesFreelanceTaxBasicsByCountryRoute
   '/guides/how-to-invoice-international-clients': typeof GuidesHowToInvoiceInternationalClientsRoute
   '/guides/how-to-price-a-fixed-bid-project': typeof GuidesHowToPriceAFixedBidProjectRoute
   '/guides/how-to-set-your-freelance-rate': typeof GuidesHowToSetYourFreelanceRateRoute
   '/tools/annual-income-to-hourly-rate-calculator': typeof ToolsAnnualIncomeToHourlyRateCalculatorRoute
+  '/tools/billable-utilization-rate-calculator': typeof ToolsBillableUtilizationRateCalculatorRoute
+  '/tools/client-discount-calculator': typeof ToolsClientDiscountCalculatorRoute
   '/tools/currency-adjusted-rate-calculator': typeof ToolsCurrencyAdjustedRateCalculatorRoute
   '/tools/days-to-invoice-payment-calculator': typeof ToolsDaysToInvoicePaymentCalculatorRoute
+  '/tools/freelance-day-rate-calculator': typeof ToolsFreelanceDayRateCalculatorRoute
+  '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
   '/tools/freelance-profit-margin-calculator': typeof ToolsFreelanceProfitMarginCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
+  '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
+  '/tools/rate-increase-calculator': typeof ToolsRateIncreaseCalculatorRoute
+  '/tools/retainer-pricing-calculator': typeof ToolsRetainerPricingCalculatorRoute
+  '/tools/scope-creep-cost-calculator': typeof ToolsScopeCreepCostCalculatorRoute
   '/tools/self-employment-tax-estimator': typeof ToolsSelfEmploymentTaxEstimatorRoute
+  '/tools/vat-gst-invoice-calculator': typeof ToolsVatGstInvoiceCalculatorRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -158,18 +244,29 @@ export interface FileRoutesByTo {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/guides/freelance-tax-basics-by-country': typeof GuidesFreelanceTaxBasicsByCountryRoute
   '/guides/how-to-invoice-international-clients': typeof GuidesHowToInvoiceInternationalClientsRoute
   '/guides/how-to-price-a-fixed-bid-project': typeof GuidesHowToPriceAFixedBidProjectRoute
   '/guides/how-to-set-your-freelance-rate': typeof GuidesHowToSetYourFreelanceRateRoute
   '/tools/annual-income-to-hourly-rate-calculator': typeof ToolsAnnualIncomeToHourlyRateCalculatorRoute
+  '/tools/billable-utilization-rate-calculator': typeof ToolsBillableUtilizationRateCalculatorRoute
+  '/tools/client-discount-calculator': typeof ToolsClientDiscountCalculatorRoute
   '/tools/currency-adjusted-rate-calculator': typeof ToolsCurrencyAdjustedRateCalculatorRoute
   '/tools/days-to-invoice-payment-calculator': typeof ToolsDaysToInvoicePaymentCalculatorRoute
+  '/tools/freelance-day-rate-calculator': typeof ToolsFreelanceDayRateCalculatorRoute
+  '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
   '/tools/freelance-profit-margin-calculator': typeof ToolsFreelanceProfitMarginCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
+  '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
+  '/tools/rate-increase-calculator': typeof ToolsRateIncreaseCalculatorRoute
+  '/tools/retainer-pricing-calculator': typeof ToolsRetainerPricingCalculatorRoute
+  '/tools/scope-creep-cost-calculator': typeof ToolsScopeCreepCostCalculatorRoute
   '/tools/self-employment-tax-estimator': typeof ToolsSelfEmploymentTaxEstimatorRoute
+  '/tools/vat-gst-invoice-calculator': typeof ToolsVatGstInvoiceCalculatorRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -179,18 +276,29 @@ export interface FileRoutesById {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/guides/freelance-tax-basics-by-country': typeof GuidesFreelanceTaxBasicsByCountryRoute
   '/guides/how-to-invoice-international-clients': typeof GuidesHowToInvoiceInternationalClientsRoute
   '/guides/how-to-price-a-fixed-bid-project': typeof GuidesHowToPriceAFixedBidProjectRoute
   '/guides/how-to-set-your-freelance-rate': typeof GuidesHowToSetYourFreelanceRateRoute
   '/tools/annual-income-to-hourly-rate-calculator': typeof ToolsAnnualIncomeToHourlyRateCalculatorRoute
+  '/tools/billable-utilization-rate-calculator': typeof ToolsBillableUtilizationRateCalculatorRoute
+  '/tools/client-discount-calculator': typeof ToolsClientDiscountCalculatorRoute
   '/tools/currency-adjusted-rate-calculator': typeof ToolsCurrencyAdjustedRateCalculatorRoute
   '/tools/days-to-invoice-payment-calculator': typeof ToolsDaysToInvoicePaymentCalculatorRoute
+  '/tools/freelance-day-rate-calculator': typeof ToolsFreelanceDayRateCalculatorRoute
+  '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
   '/tools/freelance-profit-margin-calculator': typeof ToolsFreelanceProfitMarginCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
+  '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
+  '/tools/rate-increase-calculator': typeof ToolsRateIncreaseCalculatorRoute
+  '/tools/retainer-pricing-calculator': typeof ToolsRetainerPricingCalculatorRoute
+  '/tools/scope-creep-cost-calculator': typeof ToolsScopeCreepCostCalculatorRoute
   '/tools/self-employment-tax-estimator': typeof ToolsSelfEmploymentTaxEstimatorRoute
+  '/tools/vat-gst-invoice-calculator': typeof ToolsVatGstInvoiceCalculatorRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -201,18 +309,29 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/sitemap.xml'
     | '/terms'
+    | '/blog/$slug'
     | '/guides/freelance-tax-basics-by-country'
     | '/guides/how-to-invoice-international-clients'
     | '/guides/how-to-price-a-fixed-bid-project'
     | '/guides/how-to-set-your-freelance-rate'
     | '/tools/annual-income-to-hourly-rate-calculator'
+    | '/tools/billable-utilization-rate-calculator'
+    | '/tools/client-discount-calculator'
     | '/tools/currency-adjusted-rate-calculator'
     | '/tools/days-to-invoice-payment-calculator'
+    | '/tools/freelance-day-rate-calculator'
+    | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
     | '/tools/freelance-profit-margin-calculator'
     | '/tools/invoice-late-fee-calculator'
+    | '/tools/payment-processing-fee-calculator'
     | '/tools/project-quote-calculator'
+    | '/tools/rate-increase-calculator'
+    | '/tools/retainer-pricing-calculator'
+    | '/tools/scope-creep-cost-calculator'
     | '/tools/self-employment-tax-estimator'
+    | '/tools/vat-gst-invoice-calculator'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -221,18 +340,29 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/sitemap.xml'
     | '/terms'
+    | '/blog/$slug'
     | '/guides/freelance-tax-basics-by-country'
     | '/guides/how-to-invoice-international-clients'
     | '/guides/how-to-price-a-fixed-bid-project'
     | '/guides/how-to-set-your-freelance-rate'
     | '/tools/annual-income-to-hourly-rate-calculator'
+    | '/tools/billable-utilization-rate-calculator'
+    | '/tools/client-discount-calculator'
     | '/tools/currency-adjusted-rate-calculator'
     | '/tools/days-to-invoice-payment-calculator'
+    | '/tools/freelance-day-rate-calculator'
+    | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
     | '/tools/freelance-profit-margin-calculator'
     | '/tools/invoice-late-fee-calculator'
+    | '/tools/payment-processing-fee-calculator'
     | '/tools/project-quote-calculator'
+    | '/tools/rate-increase-calculator'
+    | '/tools/retainer-pricing-calculator'
+    | '/tools/scope-creep-cost-calculator'
     | '/tools/self-employment-tax-estimator'
+    | '/tools/vat-gst-invoice-calculator'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -241,18 +371,29 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/sitemap.xml'
     | '/terms'
+    | '/blog/$slug'
     | '/guides/freelance-tax-basics-by-country'
     | '/guides/how-to-invoice-international-clients'
     | '/guides/how-to-price-a-fixed-bid-project'
     | '/guides/how-to-set-your-freelance-rate'
     | '/tools/annual-income-to-hourly-rate-calculator'
+    | '/tools/billable-utilization-rate-calculator'
+    | '/tools/client-discount-calculator'
     | '/tools/currency-adjusted-rate-calculator'
     | '/tools/days-to-invoice-payment-calculator'
+    | '/tools/freelance-day-rate-calculator'
+    | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
     | '/tools/freelance-profit-margin-calculator'
     | '/tools/invoice-late-fee-calculator'
+    | '/tools/payment-processing-fee-calculator'
     | '/tools/project-quote-calculator'
+    | '/tools/rate-increase-calculator'
+    | '/tools/retainer-pricing-calculator'
+    | '/tools/scope-creep-cost-calculator'
     | '/tools/self-employment-tax-estimator'
+    | '/tools/vat-gst-invoice-calculator'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -262,18 +403,29 @@ export interface RootRouteChildren {
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   GuidesFreelanceTaxBasicsByCountryRoute: typeof GuidesFreelanceTaxBasicsByCountryRoute
   GuidesHowToInvoiceInternationalClientsRoute: typeof GuidesHowToInvoiceInternationalClientsRoute
   GuidesHowToPriceAFixedBidProjectRoute: typeof GuidesHowToPriceAFixedBidProjectRoute
   GuidesHowToSetYourFreelanceRateRoute: typeof GuidesHowToSetYourFreelanceRateRoute
   ToolsAnnualIncomeToHourlyRateCalculatorRoute: typeof ToolsAnnualIncomeToHourlyRateCalculatorRoute
+  ToolsBillableUtilizationRateCalculatorRoute: typeof ToolsBillableUtilizationRateCalculatorRoute
+  ToolsClientDiscountCalculatorRoute: typeof ToolsClientDiscountCalculatorRoute
   ToolsCurrencyAdjustedRateCalculatorRoute: typeof ToolsCurrencyAdjustedRateCalculatorRoute
   ToolsDaysToInvoicePaymentCalculatorRoute: typeof ToolsDaysToInvoicePaymentCalculatorRoute
+  ToolsFreelanceDayRateCalculatorRoute: typeof ToolsFreelanceDayRateCalculatorRoute
+  ToolsFreelanceEmergencyFundCalculatorRoute: typeof ToolsFreelanceEmergencyFundCalculatorRoute
   ToolsFreelanceHourlyRateCalculatorRoute: typeof ToolsFreelanceHourlyRateCalculatorRoute
   ToolsFreelanceProfitMarginCalculatorRoute: typeof ToolsFreelanceProfitMarginCalculatorRoute
   ToolsInvoiceLateFeeCalculatorRoute: typeof ToolsInvoiceLateFeeCalculatorRoute
+  ToolsPaymentProcessingFeeCalculatorRoute: typeof ToolsPaymentProcessingFeeCalculatorRoute
   ToolsProjectQuoteCalculatorRoute: typeof ToolsProjectQuoteCalculatorRoute
+  ToolsRateIncreaseCalculatorRoute: typeof ToolsRateIncreaseCalculatorRoute
+  ToolsRetainerPricingCalculatorRoute: typeof ToolsRetainerPricingCalculatorRoute
+  ToolsScopeCreepCostCalculatorRoute: typeof ToolsScopeCreepCostCalculatorRoute
   ToolsSelfEmploymentTaxEstimatorRoute: typeof ToolsSelfEmploymentTaxEstimatorRoute
+  ToolsVatGstInvoiceCalculatorRoute: typeof ToolsVatGstInvoiceCalculatorRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -320,6 +472,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/vat-gst-invoice-calculator': {
+      id: '/tools/vat-gst-invoice-calculator'
+      path: '/tools/vat-gst-invoice-calculator'
+      fullPath: '/tools/vat-gst-invoice-calculator'
+      preLoaderRoute: typeof ToolsVatGstInvoiceCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/self-employment-tax-estimator': {
       id: '/tools/self-employment-tax-estimator'
       path: '/tools/self-employment-tax-estimator'
@@ -327,11 +493,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsSelfEmploymentTaxEstimatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/scope-creep-cost-calculator': {
+      id: '/tools/scope-creep-cost-calculator'
+      path: '/tools/scope-creep-cost-calculator'
+      fullPath: '/tools/scope-creep-cost-calculator'
+      preLoaderRoute: typeof ToolsScopeCreepCostCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/retainer-pricing-calculator': {
+      id: '/tools/retainer-pricing-calculator'
+      path: '/tools/retainer-pricing-calculator'
+      fullPath: '/tools/retainer-pricing-calculator'
+      preLoaderRoute: typeof ToolsRetainerPricingCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/rate-increase-calculator': {
+      id: '/tools/rate-increase-calculator'
+      path: '/tools/rate-increase-calculator'
+      fullPath: '/tools/rate-increase-calculator'
+      preLoaderRoute: typeof ToolsRateIncreaseCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/project-quote-calculator': {
       id: '/tools/project-quote-calculator'
       path: '/tools/project-quote-calculator'
       fullPath: '/tools/project-quote-calculator'
       preLoaderRoute: typeof ToolsProjectQuoteCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/payment-processing-fee-calculator': {
+      id: '/tools/payment-processing-fee-calculator'
+      path: '/tools/payment-processing-fee-calculator'
+      fullPath: '/tools/payment-processing-fee-calculator'
+      preLoaderRoute: typeof ToolsPaymentProcessingFeeCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/invoice-late-fee-calculator': {
@@ -355,6 +549,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsFreelanceHourlyRateCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/freelance-emergency-fund-calculator': {
+      id: '/tools/freelance-emergency-fund-calculator'
+      path: '/tools/freelance-emergency-fund-calculator'
+      fullPath: '/tools/freelance-emergency-fund-calculator'
+      preLoaderRoute: typeof ToolsFreelanceEmergencyFundCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/freelance-day-rate-calculator': {
+      id: '/tools/freelance-day-rate-calculator'
+      path: '/tools/freelance-day-rate-calculator'
+      fullPath: '/tools/freelance-day-rate-calculator'
+      preLoaderRoute: typeof ToolsFreelanceDayRateCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/days-to-invoice-payment-calculator': {
       id: '/tools/days-to-invoice-payment-calculator'
       path: '/tools/days-to-invoice-payment-calculator'
@@ -367,6 +575,20 @@ declare module '@tanstack/react-router' {
       path: '/tools/currency-adjusted-rate-calculator'
       fullPath: '/tools/currency-adjusted-rate-calculator'
       preLoaderRoute: typeof ToolsCurrencyAdjustedRateCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/client-discount-calculator': {
+      id: '/tools/client-discount-calculator'
+      path: '/tools/client-discount-calculator'
+      fullPath: '/tools/client-discount-calculator'
+      preLoaderRoute: typeof ToolsClientDiscountCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/billable-utilization-rate-calculator': {
+      id: '/tools/billable-utilization-rate-calculator'
+      path: '/tools/billable-utilization-rate-calculator'
+      fullPath: '/tools/billable-utilization-rate-calculator'
+      preLoaderRoute: typeof ToolsBillableUtilizationRateCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/annual-income-to-hourly-rate-calculator': {
@@ -404,6 +626,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GuidesFreelanceTaxBasicsByCountryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -414,6 +643,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  BlogSlugRoute: BlogSlugRoute,
   GuidesFreelanceTaxBasicsByCountryRoute:
     GuidesFreelanceTaxBasicsByCountryRoute,
   GuidesHowToInvoiceInternationalClientsRoute:
@@ -422,17 +652,30 @@ const rootRouteChildren: RootRouteChildren = {
   GuidesHowToSetYourFreelanceRateRoute: GuidesHowToSetYourFreelanceRateRoute,
   ToolsAnnualIncomeToHourlyRateCalculatorRoute:
     ToolsAnnualIncomeToHourlyRateCalculatorRoute,
+  ToolsBillableUtilizationRateCalculatorRoute:
+    ToolsBillableUtilizationRateCalculatorRoute,
+  ToolsClientDiscountCalculatorRoute: ToolsClientDiscountCalculatorRoute,
   ToolsCurrencyAdjustedRateCalculatorRoute:
     ToolsCurrencyAdjustedRateCalculatorRoute,
   ToolsDaysToInvoicePaymentCalculatorRoute:
     ToolsDaysToInvoicePaymentCalculatorRoute,
+  ToolsFreelanceDayRateCalculatorRoute: ToolsFreelanceDayRateCalculatorRoute,
+  ToolsFreelanceEmergencyFundCalculatorRoute:
+    ToolsFreelanceEmergencyFundCalculatorRoute,
   ToolsFreelanceHourlyRateCalculatorRoute:
     ToolsFreelanceHourlyRateCalculatorRoute,
   ToolsFreelanceProfitMarginCalculatorRoute:
     ToolsFreelanceProfitMarginCalculatorRoute,
   ToolsInvoiceLateFeeCalculatorRoute: ToolsInvoiceLateFeeCalculatorRoute,
+  ToolsPaymentProcessingFeeCalculatorRoute:
+    ToolsPaymentProcessingFeeCalculatorRoute,
   ToolsProjectQuoteCalculatorRoute: ToolsProjectQuoteCalculatorRoute,
+  ToolsRateIncreaseCalculatorRoute: ToolsRateIncreaseCalculatorRoute,
+  ToolsRetainerPricingCalculatorRoute: ToolsRetainerPricingCalculatorRoute,
+  ToolsScopeCreepCostCalculatorRoute: ToolsScopeCreepCostCalculatorRoute,
   ToolsSelfEmploymentTaxEstimatorRoute: ToolsSelfEmploymentTaxEstimatorRoute,
+  ToolsVatGstInvoiceCalculatorRoute: ToolsVatGstInvoiceCalculatorRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
