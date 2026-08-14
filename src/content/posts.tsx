@@ -283,38 +283,333 @@ export const POSTS: Record<string, PostContent> = {
   },
 
   "how-to-avoid-scope-creep": {
-    ...base("how-to-avoid-scope-creep"),
-    deck: "Scope creep is a pricing and process failure, not a client character flaw. Fix it upstream.",
-    metaDescription: "How freelancers can prevent scope creep: precise deliverables, revision limits, change orders, and the exact wording to use when extras appear.",
-    sections: [
-      { h: "Define deliverables, not intentions", body: (
+  ...base("how-to-avoid-scope-creep"),
+  deck: "Freelance scope creep happens when a project quietly grows beyond the original agreement. Here are real-world scope creep examples and practical ways to prevent, price, and handle extra work.",
+  metaDescription:
+    "See real freelance scope creep examples and learn how to prevent extra work, set revision limits, handle client requests, and charge for changes.",
+
+  sections: [
+    {
+      h: "What is scope creep in freelancing?",
+      body: (
         <>
-          <p>"A website" is an intention. "Five responsive page templates, two rounds of revisions, delivered in Figma" is a deliverable. Ambiguity is where creep lives.</p>
+          <p>
+            Freelance scope creep is when a client asks for work that was not
+            included in the original project agreement. The request may seem
+            small, but several small additions can turn a profitable project
+            into an unpaid second project.
+          </p>
+
+          <p>
+            Scope creep is not necessarily caused by a difficult client. It
+            often happens because the original scope was too vague, revisions
+            were not limited, or there was no clear process for approving
+            additional work.
+          </p>
         </>
-      )},
-      { h: "Cap revisions explicitly", body: (
+      ),
+    },
+
+    {
+      h: "10 freelance scope creep examples",
+      body: (
         <>
-          <p>Two rounds is standard. State what a round is, how long the client has to send feedback, and what an extra round costs. Put the number in the proposal, not just the contract.</p>
+          <p>
+            These are common examples of scope creep that freelancers
+            encounter during real projects:
+          </p>
+
+          <ol className="list-decimal space-y-2 pl-6">
+            <li>
+              <strong>Extra pages:</strong> A client asks for three additional
+              website pages that were not included in the original proposal.
+            </li>
+
+            <li>
+              <strong>Additional revisions:</strong> The agreed two revision
+              rounds become five or six rounds of changes.
+            </li>
+
+            <li>
+              <strong>New features:</strong> A client asks for a dashboard,
+              payment system, booking feature, or another function after the
+              project has started.
+            </li>
+
+            <li>
+              <strong>More content:</strong> The client asks you to write,
+              rewrite, upload, or format additional content.
+            </li>
+
+            <li>
+              <strong>Extra meetings:</strong> Regular meetings become longer
+              or more frequent than originally planned.
+            </li>
+
+            <li>
+              <strong>Design changes:</strong> The client changes the approved
+              design direction and asks you to redesign completed work.
+            </li>
+
+            <li>
+              <strong>Extra platforms:</strong> A project originally planned
+              for one platform suddenly needs versions for additional
+              platforms or devices.
+            </li>
+
+            <li>
+              <strong>Unplanned research:</strong> You are asked to perform
+              additional research, competitor analysis, or strategy work.
+            </li>
+
+            <li>
+              <strong>Post-delivery support:</strong> A client continues
+              requesting fixes and changes after the agreed support period.
+            </li>
+
+            <li>
+              <strong>"One small thing":</strong> A supposedly tiny request
+              takes another hour or two and becomes a pattern throughout the
+              project.
+            </li>
+          </ol>
         </>
-      )},
-      { h: "Price the extra before you agree to it", body: (
+      ),
+    },
+
+    {
+      h: "Example: how a small request becomes scope creep",
+      body: (
         <>
-          <p>The moment a new request appears, estimate the hours and quote it. The <Link to="/tools/scope-creep-cost-calculator">scope creep cost calculator</Link> converts hours into a change-order figure and shows the margin damage of doing it for free.</p>
+          <p>
+            Imagine you agree to build a five-page website for $1,000 with two
+            rounds of revisions.
+          </p>
+
+          <p>
+            During the project, the client asks for a sixth page. Then they
+            request a new contact form, another design revision, and several
+            additional sections.
+          </p>
+
+          <p>
+            Each request might sound reasonable by itself. Together, however,
+            they have increased the amount of work far beyond the original
+            agreement.
+          </p>
+
+          <p>
+            This is why freelancers should evaluate the <strong>total project
+            impact</strong>, rather than deciding whether each individual
+            request sounds small.
+          </p>
         </>
-      )},
-      { h: "Use a change order, however informal", body: (
+      ),
+    },
+
+    {
+      h: "Define deliverables before the project starts",
+      body: (
         <>
-          <p><em>"Adding [X] takes about [N] hours, which is $[Y] and pushes delivery to [date]. Reply 'approved' and I'll start."</em> One email is enough. What matters is that the client says yes to the cost before the work happens.</p>
+          <p>
+            The easiest way to prevent scope creep is to make the original
+            scope specific.
+          </p>
+
+          <p>
+            "Build a website" is an intention. "Five responsive page templates,
+            two revision rounds, delivered in Figma and implemented in
+            React" is a much clearer deliverable.
+          </p>
+
+          <p>
+            Your proposal should explain what you are delivering, what is not
+            included, how many revisions are included, and what happens when
+            the client requests something outside the agreement.
+          </p>
         </>
-      )},
-      { h: "Say yes to small things — knowingly", body: (
+      ),
+    },
+
+    {
+      h: "Limit revisions explicitly",
+      body: (
         <>
-          <p>Doing a genuinely small favour builds goodwill. The problem is doing it unconsciously, repeatedly, across a project. Track it: if unpaid extras exceed 5% of the project value, it's no longer goodwill — it's a discount you didn't choose.</p>
+          <p>
+            Revision limits are one of the simplest ways to control scope.
+            State exactly how many rounds are included and what counts as a
+            revision.
+          </p>
+
+          <p>
+            For example: "The project includes two rounds of revisions.
+            Additional revision rounds are billed at the agreed hourly rate."
+          </p>
+
+          <p>
+            Put this information in the proposal before the client approves
+            the project. Do not rely on an informal conversation or assume
+            that the client knows what is included.
+          </p>
         </>
-      )},
-    ],
-    related: ["/tools/scope-creep-cost-calculator", "/tools/project-quote-calculator", "/tools/billable-utilization-rate-calculator"],
-  },
+      ),
+    },
+
+    {
+      h: "How to respond when a client asks for extra work",
+      body: (
+        <>
+          <p>
+            You do not have to say no to every additional request. Instead,
+            separate the request from the original scope and price it
+            separately.
+          </p>
+
+          <p>
+            A simple response can be:
+          </p>
+
+          <blockquote className="border-l-2 pl-4 italic">
+            "That isn't included in the current project scope. I can add it
+            as an additional item for $[amount], and it would move the
+            delivery date to [date]. If you'd like to proceed, reply with
+            approval and I'll add it to the project."
+          </blockquote>
+
+          <p>
+            This keeps the conversation professional and makes the cost and
+            schedule impact clear before you begin the extra work.
+          </p>
+        </>
+      ),
+    },
+
+    {
+      h: "Calculate what scope creep is actually costing you",
+      body: (
+        <>
+          <p>
+            Extra work is not free just because it takes only an hour or two.
+            If you repeatedly absorb unpaid work, your effective hourly rate
+            can fall significantly.
+          </p>
+
+          <p>
+            Use our{" "}
+            <Link to="/tools/scope-creep-cost-calculator">
+              Scope Creep Cost Calculator
+            </Link>{" "}
+            to estimate the value of additional hours and see how unpaid work
+            affects your project margin.
+          </p>
+        </>
+      ),
+    },
+
+    {
+      h: "Use change orders for larger requests",
+      body: (
+        <>
+          <p>
+            When a request is clearly outside the original scope, create a
+            change order before starting the work.
+          </p>
+
+          <p>
+            It does not need to be complicated. You can state the additional
+            work, price, and revised deadline in writing:
+          </p>
+
+          <blockquote className="border-l-2 pl-4 italic">
+            "Adding [X] will take approximately [N] additional hours and cost
+            $[Y]. The new delivery date will be [date]. Please confirm
+            approval before I begin."
+          </blockquote>
+
+          <p>
+            The important part is getting approval for the additional cost
+            before doing the work.
+          </p>
+        </>
+      ),
+    },
+
+    {
+      h: "When should you do extra work for free?",
+      body: (
+        <>
+          <p>
+            Occasionally doing a genuinely small favor can be reasonable. The
+            problem begins when unpaid extras become normal.
+          </p>
+
+          <p>
+            Track the additional work you perform. If unpaid extras repeatedly
+            consume a meaningful portion of your project time, you are
+            effectively giving the client a discount without choosing to do
+            so.
+          </p>
+
+          <p>
+            A professional boundary is not about refusing to help clients. It
+            is about making sure both sides understand when a request changes
+            the original agreement.
+          </p>
+        </>
+      ),
+    },
+
+    {
+      h: "How to prevent scope creep on your next freelance project",
+      body: (
+        <>
+          <p>
+            Before starting your next project, make these five things explicit:
+          </p>
+
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Exactly what you will deliver</li>
+            <li>What is specifically excluded</li>
+            <li>How many revision rounds are included</li>
+            <li>How additional work will be priced</li>
+            <li>How changes affect the delivery date</li>
+          </ul>
+
+          <p>
+            Clear scope protects both the freelancer and the client. It also
+            makes difficult conversations much easier because you can point
+            back to an agreement instead of arguing about expectations.
+          </p>
+        </>
+      ),
+    },
+
+    {
+      h: "The bottom line",
+      body: (
+        <>
+          <p>
+            Scope creep is usually easier to prevent than to fix. Define the
+            project clearly, limit revisions, document changes, and price
+            additional work before you start it.
+          </p>
+
+          <p>
+            The goal is not to reject every client request. The goal is to
+            make sure additional work is a conscious business decision rather
+            than unpaid work that quietly reduces your earnings.
+          </p>
+        </>
+      ),
+    },
+  ],
+
+  related: [
+    "/tools/scope-creep-cost-calculator",
+    "/tools/project-quote-calculator",
+    "/tools/billable-utilization-rate-calculator",
+  ],
+},
 
   "best-payment-methods-for-international-freelancers": {
     ...base("best-payment-methods-for-international-freelancers"),
