@@ -258,136 +258,336 @@ export function GuideShell({
   );
 }
 
-export const Route = createFileRoute("/guides/how-to-set-your-freelance-rate")({
+export const Route = createFileRoute(
+  "/guides/how-to-set-your-freelance-rate"
+)({
   head: () => ({
     meta: [
       {
         title:
-          "How to Set Your Freelance Rate: A Complete Guide | Freelance Money Hub",
+          "How to Set Your Freelance Rate: Complete Guide + Calculator | Freelance Money Hub",
       },
       {
         name: "description",
         content:
-          "Learn how to calculate and set a freelance rate that covers your costs, taxes, target income, and non-billable time.",
+          "Learn how to set a freelance rate using your target income, expenses, taxes, billable hours, and profit margin. Includes practical examples and calculators.",
       },
     ],
   }),
 
   component: () => (
     <GuideShell
-      breadcrumb="Setting your rate"
+      breadcrumb="Setting your freelance rate"
       title="How to Set Your Freelance Rate: A Complete Guide"
-      deck="Rate-setting isn't magic. It's arithmetic plus positioning. This guide walks you through both, from your target income to a number you can defend on a discovery call."
+      deck="Learn how to calculate a freelance rate that covers your income goal, business expenses, taxes, non-billable time, and profit — then turn the number into a rate you can confidently quote."
       sections={[
         {
-          h: "Start with a target, not a rate",
+          h: "How do you calculate a freelance rate?",
           body: (
             <>
               <p>
-                Almost every rate-setting failure starts the same way: opening
-                a spreadsheet and typing in a rate. You have no way to know if
-                $60 or $160 is right until you know what number, at the end of
-                the year, would count as a good year for you.
+                A sustainable freelance rate starts with the amount you want
+                to earn, not with what another freelancer charges. Your rate
+                needs to account for your target income, business expenses,
+                taxes, non-billable time, and the number of hours you can
+                realistically bill.
               </p>
 
               <p>
-                Pick that annual take-home number first. Then work backwards.
-                Our{" "}
+                A simple starting formula is:
+              </p>
+
+              <p>
+                <strong>
+                  Freelance hourly rate = required annual revenue ÷ realistic
+                  annual billable hours
+                </strong>
+              </p>
+
+              <p>
+                Your required annual revenue should include the money needed
+                for your personal income goal plus taxes, business expenses,
+                savings, and a reasonable profit buffer.
+              </p>
+
+              <p>
+                Use our{" "}
                 <Link to="/tools/freelance-hourly-rate-calculator">
                   Freelance Hourly Rate Calculator
                 </Link>{" "}
-                does the arithmetic once you have it.
+                to work through the numbers.
               </p>
             </>
           ),
         },
 
         {
-          h: "Add the things a salary hid from you",
+          h: "Start with your target income",
           body: (
             <>
               <p>
-                A salary quietly paid for a lot of things: paid time off,
-                health insurance, employer-side taxes, laptops, software,
-                learning time, and the hours you spent in meetings or
-                administrative work.
+                Before choosing an hourly, daily, or project rate, decide what
+                you want your freelance business to provide financially.
               </p>
 
               <p>
-                As a freelancer you pay for many of those costs yourself, and
-                not every working hour is billable.
+                Think about the amount you want to take home after business
+                costs and taxes. Then work backwards to determine how much
+                revenue your freelance business needs to generate.
               </p>
 
               <p>
-                If you're leaving a salary, use our{" "}
+                Starting with a target is more reliable than copying a rate
+                from another freelancer because your expenses, experience,
+                location, taxes, niche, and available working time may all be
+                different.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "Include the costs a salary used to cover",
+          body: (
+            <>
+              <p>
+                Freelancers often underestimate their rate because they
+                compare freelance revenue directly with an employee salary.
+                The two numbers are not equivalent.
+              </p>
+
+              <p>
+                As a freelancer, you may need to pay for software, equipment,
+                internet, professional services, training, marketing,
+                accounting, insurance, taxes, and time off.
+              </p>
+
+              <p>
+                You also spend time on work that cannot always be billed to a
+                client, such as proposals, sales calls, administration,
+                planning, communication, and business development.
+              </p>
+
+              <p>
+                If you are moving from employment into freelancing, our{" "}
                 <Link to="/tools/annual-income-to-hourly-rate-calculator">
                   Salary → Hourly Calculator
                 </Link>{" "}
-                to help estimate a sustainable starting point.
+                can help you estimate a freelance equivalent.
               </p>
             </>
           ),
         },
 
         {
-          h: "Pick your billable hours honestly",
+          h: "Calculate your realistic billable hours",
           body: (
             <>
               <p>
-                Don't assume that every hour you spend working can be charged
-                to a client. Sales, administration, communication, learning,
-                planning, and support can all take time.
+                One of the biggest freelance pricing mistakes is assuming that
+                every working hour can be billed.
               </p>
 
               <p>
-                If your calculated rate feels high, don't automatically solve
-                the problem by assuming an unrealistic number of billable
-                hours. Instead, review your costs, positioning, target income,
-                and the type of clients you want to serve.
+                If you work 40 hours in a week, some of that time may go toward
+                finding clients, writing proposals, answering emails,
+                administration, learning, meetings, and other business tasks.
+              </p>
+
+              <p>
+                Your rate therefore needs to be based on{" "}
+                <strong>billable hours</strong>, not simply total working
+                hours.
+              </p>
+
+              <p>
+                Be realistic when estimating your annual billable capacity.
+                Increasing your assumed billable hours just to make your rate
+                look cheaper can create an unrealistic workload.
               </p>
             </>
           ),
         },
 
         {
-          h: "Layer in taxes and a profit buffer",
+          h: "Add taxes, expenses, and a profit buffer",
           body: (
             <>
               <p>
-                Your rate may need to cover income tax, self-employment taxes
-                or social contributions, business expenses, and slower periods.
+                Your freelance rate should not simply cover the amount you
+                want to spend personally. It also needs to account for
+                business costs and taxes.
+              </p>
+
+              <p>
+                Depending on where you live and how your business is
+                structured, you may have income taxes, self-employment taxes,
+                social contributions, or other obligations.
               </p>
 
               <p>
                 Use our{" "}
                 <Link to="/tools/self-employment-tax-estimator">
-                  Tax Estimator
+                  Self-Employment Tax Estimator
                 </Link>{" "}
-                to explore the effect of taxes on your freelance income.
+                to explore how taxes can affect your freelance income.
               </p>
 
               <p>
-                A sustainable freelance rate should cover more than your basic
-                expenses. It should also leave room for business growth,
-                unexpected costs, and profit.
+                After covering your expected costs, leave room for profit and
+                unexpected expenses. A business that only breaks even is not
+                giving you much protection during slow periods.
               </p>
             </>
           ),
         },
 
         {
-          h: "Test your rate with real clients",
+          h: "Hourly rate vs project rate",
           body: (
             <>
               <p>
-                Your rate is not something you need to announce permanently.
-                Test it with new prospects and pay attention to the quality of
-                leads, client expectations, project scope, and your ability to
-                close suitable projects.
+                Freelancers commonly charge either by the hour or by the
+                project. Neither model is automatically better.
               </p>
 
               <p>
-                If your positioning improves, your rate can evolve with it.
+                <strong>Hourly pricing</strong> is straightforward when the
+                amount of work is difficult to predict. You are paid according
+                to the time spent.
+              </p>
+
+              <p>
+                <strong>Project pricing</strong> can work well when the scope
+                and deliverables are clearly defined. The client pays for an
+                agreed outcome rather than watching the clock.
+              </p>
+
+              <p>
+                Even when you quote a fixed project price, calculate your
+                internal hourly equivalent. This helps you determine whether
+                the project is actually profitable.
+              </p>
+
+              <p>
+                For project pricing, try our{" "}
+                <Link to="/tools/project-quote-calculator">
+                  Project Quote Calculator
+                </Link>
+                .
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "Example: calculating a freelance hourly rate",
+          body: (
+            <>
+              <p>
+                Suppose your freelance business needs to generate $60,000 in
+                annual revenue and you realistically expect to bill 1,000
+                hours during the year.
+              </p>
+
+              <p>
+                The basic calculation would be:
+              </p>
+
+              <p>
+                <strong>$60,000 ÷ 1,000 billable hours = $60/hour</strong>
+              </p>
+
+              <p>
+                That $60/hour figure is only a starting point. You should make
+                sure the annual revenue target already accounts for the taxes,
+                business expenses, savings, and profit you need.
+              </p>
+
+              <p>
+                If those costs are not included, your apparently attractive
+                hourly rate may leave you earning much less than expected.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "How to know if your freelance rate is too low",
+          body: (
+            <>
+              <p>
+                A rate may be too low if you consistently struggle to cover
+                your business costs, work more hours than planned, or discover
+                that projects are not profitable after accounting for all the
+                time involved.
+              </p>
+
+              <p>
+                Another warning sign is having plenty of demand but very
+                little room for savings, time off, professional development,
+                or business growth.
+              </p>
+
+              <p>
+                Review your effective hourly earnings regularly instead of
+                judging your rate only by the number written on an invoice.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "How to raise your freelance rate",
+          body: (
+            <>
+              <p>
+                You do not need to wait until you completely rebuild your
+                business before increasing your rate.
+              </p>
+
+              <p>
+                Start by testing a higher rate with new clients. Track the
+                quality of leads, the type of projects you attract, the amount
+                of negotiation, and whether clients understand the value you
+                provide.
+              </p>
+
+              <p>
+                Stronger positioning, specialization, testimonials, case
+                studies, and a clear portfolio can make higher rates easier to
+                justify.
+              </p>
+
+              <p>
+                For existing clients, consider giving reasonable notice before
+                changing your pricing rather than unexpectedly changing an
+                agreed project rate.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "The bottom line",
+          body: (
+            <>
+              <p>
+                There is no single freelance rate that is correct for
+                everyone. The right rate is the one that makes your business
+                financially sustainable while matching the value and type of
+                work you provide.
+              </p>
+
+              <p>
+                Start with your target income, account for expenses and taxes,
+                estimate realistic billable hours, and then calculate the
+                minimum rate your business needs.
+              </p>
+
+              <p>
+                From there, use your experience, specialization, demand, and
+                positioning to determine what you can confidently charge.
               </p>
             </>
           ),
