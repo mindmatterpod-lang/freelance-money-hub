@@ -8,7 +8,7 @@ export const Route = createFileRoute(
     meta: [
       {
         title:
-          "How to Invoice International Clients | Freelance Money Hub",
+          "How to Invoice International Clients as a Freelancer | Freelance Money Hub",
       },
       {
         name: "description",
@@ -34,16 +34,16 @@ export const Route = createFileRoute(
             <>
               <p>
                 To invoice an international client, create a clear invoice
-                that identifies both you and your client, describes the work
+                that identifies you and your client, describes the work
                 completed, states the amount and currency, gives a payment due
                 date, and explains how the client should pay.
               </p>
 
               <p>
-                Before sending the invoice, agree with your client on the
-                project price, currency, payment schedule, payment method, and
-                any applicable fees or taxes. Keeping these details clear from
-                the beginning can prevent payment problems later.
+                Before sending the invoice, agree on the project price,
+                currency, payment schedule, payment method, and any applicable
+                fees or taxes. Keeping these details clear from the beginning
+                can prevent payment problems later.
               </p>
             </>
           ),
@@ -72,20 +72,13 @@ export const Route = createFileRoute(
                 <li>Currency, such as USD, EUR, or GBP</li>
                 <li>Agreed payment terms</li>
                 <li>Payment instructions or payment link</li>
-                <li>Relevant project or purchase-order information, if required</li>
               </ul>
-
-              <p>
-                The exact information required can vary depending on your
-                country, business structure, client, and the type of service
-                you provide.
-              </p>
             </>
           ),
         },
 
         {
-          h: "1. Agree on payment terms before starting the project",
+          h: "1. Agree on payment terms before starting",
           body: (
             <>
               <p>
@@ -106,11 +99,6 @@ export const Route = createFileRoute(
                 <li>Responsibility for transaction or conversion fees</li>
                 <li>Any agreed late-payment terms</li>
               </ul>
-
-              <p>
-                For larger projects, milestone payments can reduce the amount
-                of unpaid work you have completed before receiving payment.
-              </p>
             </>
           ),
         },
@@ -121,26 +109,24 @@ export const Route = createFileRoute(
             <>
               <p>
                 Always make the currency obvious on the invoice. For example,
-                write <strong>$750 USD</strong> instead of simply writing
+                write <strong>$750 USD</strong> instead of simply writing{" "}
                 <strong>$750</strong>.
               </p>
 
               <p>
                 The currency should be agreed with the client before the
-                invoice is issued. Common currencies for international
-                freelance work include USD, EUR, and GBP, although the best
-                choice depends on the client and payment arrangement.
+                invoice is issued. USD, EUR, and GBP are common choices for
+                international freelance work.
               </p>
 
               <p>
-                If your receiving account uses another currency, remember that
-                the amount you ultimately receive can be affected by exchange
-                rates and payment-provider or banking fees.
+                If your receiving account uses another currency, the amount you
+                ultimately receive can be affected by exchange rates and
+                payment-provider or banking fees.
               </p>
 
               <p>
-                Before setting your final price, you can estimate the effect of
-                currency conversion with our{" "}
+                Estimate the effect of currency conversion with our{" "}
                 <Link to="/tools/currency-adjusted-rate-calculator">
                   Currency-Adjusted Rate Calculator
                 </Link>
@@ -159,10 +145,6 @@ export const Route = createFileRoute(
                 track payments and communicate with clients.
               </p>
 
-              <p>
-                For example:
-              </p>
-
               <ul>
                 <li>INV-2026-001</li>
                 <li>INV-2026-002</li>
@@ -171,7 +153,7 @@ export const Route = createFileRoute(
 
               <p>
                 A unique invoice number also makes it easier for a client to
-                reference the correct payment when contacting you.
+                reference the correct payment.
               </p>
             </>
           ),
@@ -182,13 +164,11 @@ export const Route = createFileRoute(
           body: (
             <>
               <p>
-                Avoid vague invoice descriptions such as
-                <strong> "Freelance work — $500"</strong>.
+                Avoid vague descriptions such as{" "}
+                <strong>"Freelance work — $500"</strong>.
               </p>
 
-              <p>
-                Instead, describe what the client is paying for. For example:
-              </p>
+              <p>Instead, describe what the client is paying for:</p>
 
               <ul>
                 <li>Responsive website development — $600 USD</li>
@@ -209,11 +189,9 @@ export const Route = createFileRoute(
           body: (
             <>
               <p>
-                Give your client a specific payment deadline instead of using
-                vague wording such as "pay soon."
+                Give your client a specific payment deadline instead of vague
+                wording such as "pay soon."
               </p>
-
-              <p>Common payment terms include:</p>
 
               <ul>
                 <li>Due on receipt</li>
@@ -221,11 +199,6 @@ export const Route = createFileRoute(
                 <li>Net 14</li>
                 <li>Net 30</li>
               </ul>
-
-              <p>
-                For example, if your agreed terms are Net 14, clearly show the
-                applicable due date on the invoice.
-              </p>
 
               <p>
                 The payment term should match what you and your client agreed
@@ -257,39 +230,31 @@ export const Route = createFileRoute(
               </ul>
 
               <p>
-                The cheapest option is not necessarily the best option if it is
-                difficult for your client to use. Choose a payment arrangement
-                that works for both sides.
+                Choose a payment arrangement that works for both you and your
+                client.
               </p>
             </>
           ),
         },
 
         {
-          h: "7. Understand international payment and currency fees",
+          h: "7. Understand international payment fees",
           body: (
             <>
               <p>
                 The amount shown on your invoice is not always the exact amount
-                that will arrive in your account.
+                that arrives in your account.
               </p>
 
               <p>
-                Depending on the payment arrangement, your payment may be
-                affected by:
+                Depending on the payment arrangement, payments can be affected
+                by processing fees, currency-conversion costs, bank charges, or
+                transfer fees.
               </p>
-
-              <ul>
-                <li>Payment-processing fees</li>
-                <li>Currency-conversion costs</li>
-                <li>Bank charges</li>
-                <li>Transfer fees</li>
-              </ul>
 
               <p>
                 If you expect the client to cover a specific fee, agree on that
-                before the invoice is sent. Avoid adding unexpected charges
-                after the client has already accepted the project price.
+                before the invoice is sent.
               </p>
             </>
           ),
@@ -304,76 +269,119 @@ export const Route = createFileRoute(
                 invoice could be structured:
               </p>
 
-              <div
-                style={{
-                  border: "1px solid var(--border, #e5e7eb)",
-                  borderRadius: "16px",
-                  padding: "24px",
-                  margin: "20px 0",
-                  background: "var(--card, #ffffff)",
-                }}
-              >
-                <h3>INVOICE</h3>
+              <div className="my-6 rounded-2xl border bg-card p-6 shadow-soft md:p-8">
+                <div className="flex flex-col justify-between gap-5 border-b pb-6 sm:flex-row">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-brand">
+                      Invoice
+                    </p>
 
-                <p>
-                  <strong>Invoice #:</strong> INV-2026-001
-                  <br />
-                  <strong>Issue Date:</strong> August 15, 2026
-                  <br />
-                  <strong>Due Date:</strong> August 29, 2026
-                </p>
+                    <h3 className="mt-1 text-2xl font-bold text-foreground">
+                      INV-2026-001
+                    </h3>
+                  </div>
 
-                <hr />
+                  <div className="text-sm text-muted-foreground sm:text-right">
+                    <p>Issue Date: August 15, 2026</p>
+                    <p>Due Date: August 29, 2026</p>
+                  </div>
+                </div>
 
-                <p>
-                  <strong>From</strong>
-                  <br />
-                  Alex Khan
-                  <br />
-                  Freelance Web Developer
-                  <br />
-                  Pakistan
-                </p>
+                <div className="grid gap-6 py-6 sm:grid-cols-2">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      From
+                    </p>
 
-                <p>
-                  <strong>Bill To</strong>
-                  <br />
-                  Example Client LLC
-                  <br />
-                  United States
-                </p>
+                    <p className="mt-2 font-semibold text-foreground">
+                      Alex Khan
+                    </p>
 
-                <hr />
+                    <p className="text-sm text-muted-foreground">
+                      Freelance Web Developer
+                      <br />
+                      Pakistan
+                    </p>
+                  </div>
 
-                <p>
-                  <strong>Website Development</strong>
-                  <br />
-                  Responsive business website development — $600 USD
-                </p>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Bill To
+                    </p>
 
-                <p>
-                  <strong>Testing & Optimization</strong>
-                  <br />
-                  Cross-browser testing and final optimization — $150 USD
-                </p>
+                    <p className="mt-2 font-semibold text-foreground">
+                      Example Client LLC
+                    </p>
 
-                <p>
-                  <strong>Total: $750 USD</strong>
-                </p>
+                    <p className="text-sm text-muted-foreground">
+                      United States
+                    </p>
+                  </div>
+                </div>
 
-                <p>
-                  <strong>Payment Terms:</strong> Net 14
-                  <br />
-                  <strong>Currency:</strong> USD
-                  <br />
-                  <strong>Reference:</strong> INV-2026-001
-                </p>
+                <div className="border-t pt-5">
+                  <div className="flex justify-between gap-4 py-3 text-sm">
+                    <div>
+                      <p className="font-medium text-foreground">
+                        Website Development
+                      </p>
+
+                      <p className="text-muted-foreground">
+                        Responsive business website development
+                      </p>
+                    </div>
+
+                    <span className="font-medium text-foreground">
+                      $600 USD
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between gap-4 border-t py-3 text-sm">
+                    <div>
+                      <p className="font-medium text-foreground">
+                        Testing & Optimization
+                      </p>
+
+                      <p className="text-muted-foreground">
+                        Cross-browser testing and final optimization
+                      </p>
+                    </div>
+
+                    <span className="font-medium text-foreground">
+                      $150 USD
+                    </span>
+                  </div>
+
+                  <div className="mt-4 flex items-center justify-between border-t pt-5">
+                    <span className="font-semibold text-foreground">
+                      Total
+                    </span>
+
+                    <span className="text-xl font-bold text-brand">
+                      $750 USD
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-6 rounded-xl bg-muted/50 p-4 text-sm">
+                  <p>
+                    <strong>Payment Terms:</strong> Net 14
+                  </p>
+
+                  <p className="mt-1">
+                    <strong>Payment Currency:</strong> USD
+                  </p>
+
+                  <p className="mt-1">
+                    <strong>Reference:</strong> INV-2026-001
+                  </p>
+                </div>
               </div>
 
               <p>
-                The exact format of an invoice can vary, but the goal is always
-                the same: make the payer, services, amount, currency, deadline,
-                and payment instructions easy to identify.
+                The exact format can vary, but the goal is always the same:
+                make the payer, services, amount, currency, deadline, and
+                payment instructions easy to identify.
               </p>
             </>
           ),
@@ -388,26 +396,22 @@ export const Route = createFileRoute(
                 payment terms you agreed upon.
               </p>
 
-              <p>A professional follow-up process is:</p>
-
               <ol>
                 <li>Confirm that the invoice was received.</li>
                 <li>Check that the payment instructions were correct.</li>
                 <li>Send a polite payment reminder.</li>
                 <li>Reference the invoice number and original due date.</li>
                 <li>Ask whether the client needs anything from you.</li>
-                <li>Follow any late-payment terms that were previously agreed.</li>
+                <li>Follow any previously agreed late-payment terms.</li>
               </ol>
 
               <p>
                 If you use late fees, make the terms clear before the client
-                accepts the project or payment agreement. Whether a particular
-                fee is appropriate can depend on the agreement and applicable
-                rules.
+                accepts the project or payment agreement.
               </p>
 
               <p>
-                Need to calculate a potential late fee? Use our{" "}
+                Calculate a potential late fee with our{" "}
                 <Link to="/tools/invoice-late-fee-calculator">
                   Freelance Invoice Late Fee Calculator
                 </Link>
@@ -427,8 +431,6 @@ export const Route = createFileRoute(
                 before receiving payment.
               </p>
 
-              <p>A project could, for example, be divided into:</p>
-
               <ul>
                 <li>Project start payment</li>
                 <li>Milestone payment</li>
@@ -444,7 +446,7 @@ export const Route = createFileRoute(
         },
 
         {
-          h: "11. International invoicing from Pakistan",
+          h: "11. How to invoice international clients from Pakistan",
           body: (
             <>
               <p>
@@ -456,9 +458,8 @@ export const Route = createFileRoute(
               </p>
 
               <p>
-                However, tax, banking, foreign-exchange, and reporting
-                requirements can depend on your circumstances and may change
-                over time.
+                Tax, banking, foreign-exchange, and reporting requirements can
+                depend on your circumstances and may change over time.
               </p>
 
               <p>
@@ -476,7 +477,7 @@ export const Route = createFileRoute(
             <>
               <h3>Not specifying the currency</h3>
               <p>
-                "$500" can be ambiguous. "$500 USD" is much clearer.
+                "$500" can be ambiguous. "$500 USD" is clearer.
               </p>
 
               <h3>Using vague service descriptions</h3>
@@ -491,8 +492,8 @@ export const Route = createFileRoute(
 
               <h3>Adding unexpected fees</h3>
               <p>
-                Discuss payment and currency-conversion fees before the
-                project begins.
+                Discuss payment and currency-conversion fees before the project
+                begins.
               </p>
 
               <h3>Not tracking invoices</h3>
@@ -503,8 +504,7 @@ export const Route = createFileRoute(
 
               <h3>Ignoring overdue invoices</h3>
               <p>
-                Follow up professionally when an invoice becomes overdue
-                instead of letting it remain unresolved.
+                Follow up professionally when an invoice becomes overdue.
               </p>
             </>
           ),
@@ -514,21 +514,21 @@ export const Route = createFileRoute(
           h: "International invoice checklist",
           body: (
             <>
-              <p>Before sending your invoice, check each item:</p>
+              <p>Before sending your invoice, check:</p>
 
               <ul>
-                <li>✓ Client name is correct</li>
-                <li>✓ Your details are correct</li>
-                <li>✓ Invoice number is unique</li>
-                <li>✓ Invoice date is included</li>
-                <li>✓ Due date is clear</li>
-                <li>✓ Services are described clearly</li>
-                <li>✓ Amounts are correct</li>
-                <li>✓ Currency is clearly stated</li>
-                <li>✓ Payment method is clear</li>
-                <li>✓ Agreed fees are handled correctly</li>
-                <li>✓ Relevant tax considerations have been checked</li>
-                <li>✓ Invoice matches your client agreement</li>
+                <li>Client name is correct</li>
+                <li>Your details are correct</li>
+                <li>Invoice number is unique</li>
+                <li>Invoice date is included</li>
+                <li>Due date is clear</li>
+                <li>Services are described clearly</li>
+                <li>Amounts are correct</li>
+                <li>Currency is clearly stated</li>
+                <li>Payment method is clear</li>
+                <li>Agreed fees are handled correctly</li>
+                <li>Relevant tax considerations have been checked</li>
+                <li>Invoice matches your client agreement</li>
               </ul>
             </>
           ),
@@ -555,8 +555,7 @@ export const Route = createFileRoute(
               <p>
                 Use the same basic process: identify both parties, describe the
                 services, state the agreed currency and amount, provide payment
-                terms, and give clear payment instructions. Check any applicable
-                tax requirements for your circumstances.
+                terms, and give clear payment instructions.
               </p>
 
               <h3>What currency should freelancers use?</h3>
@@ -575,15 +574,14 @@ export const Route = createFileRoute(
 
               <h3>Should freelancers charge late fees?</h3>
               <p>
-                A late fee should be agreed appropriately and should be
-                consistent with the applicable agreement and rules. If you use
-                one, make the terms clear before the client accepts the
-                arrangement.
+                A late fee should be appropriate to the agreement and
+                applicable rules. If you use one, make the terms clear before
+                the client accepts the arrangement.
               </p>
 
               <h3>How can I calculate a freelance invoice late fee?</h3>
               <p>
-                You can use the{" "}
+                Use the{" "}
                 <Link to="/tools/invoice-late-fee-calculator">
                   Freelance Money Hub Invoice Late Fee Calculator
                 </Link>{" "}
@@ -600,8 +598,8 @@ export const Route = createFileRoute(
               <h3>Should I include taxes on an international invoice?</h3>
               <p>
                 Tax treatment depends on your country, the client's country,
-                your business structure, and the type of service. Do not assume
-                that every international invoice has the same tax treatment.
+                your business structure, and the type of service. Check the
+                rules that apply to your circumstances.
               </p>
             </>
           ),
@@ -651,9 +649,7 @@ export const Route = createFileRoute(
                 details are agreed before the project starts.
               </p>
 
-              <p>
-                Your invoice should make five things immediately clear:
-              </p>
+              <p>Your invoice should make five things clear:</p>
 
               <ol>
                 <li>Who is paying?</li>
@@ -669,8 +665,7 @@ export const Route = createFileRoute(
               </p>
 
               <p>
-                If a client has already missed a payment deadline, calculate a
-                potential late fee with our{" "}
+                Need to calculate a potential late fee? Use our{" "}
                 <Link to="/tools/invoice-late-fee-calculator">
                   Invoice Late Fee Calculator
                 </Link>
