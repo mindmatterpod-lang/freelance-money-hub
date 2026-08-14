@@ -6,8 +6,14 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/tools/invoice-late-fee-calculator")({
   head: () => ({
     meta: [
-      { title: "Invoice Late Fee Calculator — Free | FreelanceRate" },
-      { name: "description", content: "Calculate fair late fees on overdue invoices and generate a copy-paste reminder email in seconds." },
+      {
+        title: "Invoice Late Fee Calculator — Calculate Overdue Invoice Fees | FreelanceRate",
+      },
+      {
+        name: "description",
+        content:
+          "Calculate late fees on overdue invoices using a monthly or daily rate. Get the fee, new invoice total, and a professional payment reminder email.",
+      },
     ],
   }),
   component: Page,
@@ -24,16 +30,23 @@ function Page() {
       mode === "monthly"
         ? amount * (rate / 100) * (days / 30)
         : amount * (rate / 100) * days;
+
     const total = amount + fee;
+
     const email = `Subject: Friendly reminder — invoice ${days} days overdue
 
 Hi there,
 
-Just a quick reminder that invoice for ${formatMoney(amount)} is now ${days} days past due. Per our terms, a late fee of ${rate}% ${mode === "monthly" ? "per month" : "per day"} applies once payment is overdue, which adds ${formatMoney(fee)} — bringing the new total to ${formatMoney(total)}.
+Just a quick reminder that invoice for ${formatMoney(amount)} is now ${days} days past due. Per our agreed payment terms, a late fee of ${rate}% ${
+      mode === "monthly" ? "per month" : "per day"
+    } applies once payment is overdue.
+
+This adds ${formatMoney(fee)}, bringing the current total to ${formatMoney(total)}.
 
 Could you confirm when we can expect payment? Happy to resend the invoice if it's helpful.
 
 Thanks!`;
+
     return { fee, total, email };
   }, [amount, days, mode, rate]);
 
@@ -41,58 +54,137 @@ Thanks!`;
     <ToolShell
       toolKey="/tools/invoice-late-fee-calculator"
       h1="Invoice Late Fee Calculator"
-      tagline="Calculate a fair late fee on an overdue invoice — and get a copy-paste reminder."
-      intro="Overdue invoices cost freelancers real money. This calculator produces a defensible late fee and drafts a polite, professional reminder email around it."
+      tagline="Calculate the late fee on an overdue invoice — and generate a professional payment reminder."
+      intro="Enter your invoice amount, days overdue, and agreed late-fee rate to calculate the additional amount owed and the updated invoice total."
       calculator={
         <div className="grid gap-6 md:grid-cols-2">
           <div className="space-y-4">
             <Field label="Invoice amount">
-              <Input type="number" value={amount} onChange={(e) => setAmount(+e.target.value || 0)} />
+              <Input
+                type="number"
+                min="0"
+                value={amount}
+                onChange={(e) => setAmount(+e.target.value || 0)}
+              />
             </Field>
+
             <Field label="Days overdue">
-              <Input type="number" value={days} onChange={(e) => setDays(+e.target.value || 0)} />
+              <Input
+                type="number"
+                min="0"
+                value={days}
+                onChange={(e) => setDays(+e.target.value || 0)}
+              />
             </Field>
+
             <Field label="Late fee type">
-              <select value={mode} onChange={(e) => setMode(e.target.value as "monthly" | "daily")} className="w-full rounded-md border bg-input/50 px-3 py-2 text-sm">
-                <option value="monthly">Flat % per month (typical)</option>
-                <option value="daily">Daily interest rate</option>
+              <select
+                value={mode}
+                onChange={(e) =>
+                  setMode(e.target.value as "monthly" | "daily")
+                }
+                className="w-full rounded-md border bg-input/50 px-3 py-2 text-sm"
+              >
+                <option value="monthly">Percentage per month</option>
+                <option value="daily">Percentage per day</option>
               </select>
             </Field>
-            <Field label={`Rate (%)`} hint={mode === "monthly" ? "1.5%/mo is common" : "0.05%/day ≈ 1.5%/mo"}>
-              <Input type="number" step="0.01" value={rate} onChange={(e) => setRate(+e.target.value || 0)} />
+
+            <Field
+              label="Late fee rate (%)"
+              hint={
+                mode === "monthly"
+                  ? "Enter the monthly rate stated in your agreement."
+                  : "Enter the daily rate stated in your agreement."
+              }
+            >
+              <Input
+                type="number"
+                min="0"
+                step="0.01"
+                value={rate}
+                onChange={(e) => setRate(+e.target.value || 0)}
+              />
             </Field>
           </div>
+
           <div className="grid content-start gap-3">
-            <Stat label="Late fee owed" value={formatMoney(fee)} accent="warm" />
-            <Stat label="New total invoice amount" value={formatMoney(total)} />
+            <Stat
+              label="Late fee owed"
+              value={formatMoney(fee)}
+              accent="warm"
+            />
+
+            <Stat
+              label="New total invoice amount"
+              value={formatMoney(total)}
+            />
+
             <div className="rounded-2xl border bg-secondary/40 p-5">
               <div className="flex items-center justify-between">
-                <p className="text-xs font-semibold uppercase text-muted-foreground">Reminder email</p>
+                <p className="text-xs font-semibold uppercase text-muted-foreground">
+                  Reminder email
+                </p>
+
                 <button
                   className="rounded-full bg-gradient-brand px-3 py-1 text-xs font-semibold text-white"
-                  onClick={() => navigator.clipboard?.writeText(email)}
+                  onClick={() =>
+                    navigator.clipboard?.writeText(email)
+                  }
                 >
                   Copy
                 </button>
               </div>
-              <pre className="mt-3 whitespace-pre-wrap break-words text-xs text-foreground/80">{email}</pre>
+
+              <pre className="mt-3 whitespace-pre-wrap break-words text-xs text-foreground/80">
+                {email}
+              </pre>
             </div>
           </div>
         </div>
       }
-      works="Late fees are usually stated as a percentage per month applied to the outstanding invoice. We prorate that percentage across the number of days overdue so the fee reflects how late payment actually is."
-      why={`Late payment isn't a service you provide for free. Real interest, opportunity cost, and administrative time all pile up while a client sits on your invoice.\n\nA published, reasonable late fee — 1.5% per month is a broadly accepted freelancer standard — signals professionalism and gives you a concrete, non-emotional lever when a client goes quiet.\n\nMost of the time you'll never need to charge it. The fact that it exists in your contract does most of the work.`}
+      works={`For a monthly percentage, this calculator prorates the monthly rate across the number of days an invoice is overdue.
+
+Formula:
+Late fee = Invoice amount × (monthly rate ÷ 100) × (days overdue ÷ 30)
+
+For a daily percentage:
+Late fee = Invoice amount × (daily rate ÷ 100) × days overdue
+
+The calculation is an estimate based on the rate you enter. Your contract, invoice terms, and applicable local rules determine whether and how a late fee can actually be charged.`}
+      why={`Late payments can create a real cash-flow problem for freelancers. While you are waiting for an overdue invoice, you may still have software costs, operating expenses, taxes, and other bills to cover.
+
+A clearly written late-payment clause can give clients an incentive to pay on time and gives you a defined process when an invoice becomes overdue.
+
+The important part is agreeing to the late-fee terms before the work begins and using a rate that is appropriate for your contract and applicable rules.`}
       mistakes={[
-        "Not mentioning a late fee anywhere in the original contract or invoice.",
-        "Waiting weeks before sending the first reminder.",
-        "Applying a punitive rate that makes the client defensive.",
-        "Forgetting to update the total on the reissued invoice.",
-        "Not resetting the clock: fees keep accruing until the invoice is paid.",
+        "Charging a late fee that was never included in the original agreement or invoice terms.",
+        "Waiting too long before sending a polite payment reminder.",
+        "Using a rate without checking whether it is permitted under the applicable rules.",
+        "Calculating the fee from the wrong outstanding balance.",
+        "Failing to show the updated amount clearly when sending an overdue-invoice reminder.",
       ]}
       faqs={[
-        { q: "Is charging a late fee legal?", a: "In most countries, yes — provided the fee is disclosed in your original contract or invoice terms. Local usury laws may cap the maximum rate; check locally." },
-        { q: "What's a fair late fee?", a: "1.5% per month is the most common freelancer default and is generally seen as reasonable." },
-        { q: "Should I always charge it?", a: "No. Use it sparingly. It's a lever, not a revenue stream." },
+        {
+          q: "How do I calculate a late fee on an invoice?",
+          a: "Multiply the outstanding invoice amount by the agreed late-fee percentage, then prorate it for the number of days overdue when the agreement uses a monthly rate. For example, a monthly rate can be calculated as invoice amount × rate ÷ 100 × days overdue ÷ 30.",
+        },
+        {
+          q: "What is a typical freelance invoice late fee?",
+          a: "There is no universal rate that applies to every freelancer or country. The appropriate rate depends on your contract, client location, applicable rules, and the terms agreed before the invoice became overdue.",
+        },
+        {
+          q: "Can I charge a late fee if it was not in my contract?",
+          a: "Do not assume that you can. Late-fee rights depend on the agreement and applicable rules. Ideally, state the payment deadline and late-fee terms clearly before starting the project.",
+        },
+        {
+          q: "Should freelancers charge late fees on every overdue invoice?",
+          a: "Not necessarily. Some freelancers use the late fee as a contractual incentive and may choose to waive it for a good client or a first-time delay. The important thing is to have clear payment terms and communicate professionally.",
+        },
+        {
+          q: "How do I politely remind a client about a late invoice?",
+          a: "Keep the message short and professional. State the invoice number, original due date, outstanding amount, and the requested payment date. If your agreed terms include a late fee, mention the fee without using threatening language.",
+        },
       ]}
       related={[
         "/tools/days-to-invoice-payment-calculator",
