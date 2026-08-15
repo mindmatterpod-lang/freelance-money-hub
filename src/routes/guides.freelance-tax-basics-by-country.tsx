@@ -4,35 +4,331 @@ import { GuideShell } from "./guides.how-to-set-your-freelance-rate";
 export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")({
   head: () => ({
     meta: [
-      { title: "Freelance Tax Basics by Country | FreelanceRate" },
-      { name: "description", content: "What self-employed people actually owe in the US, UK, Canada, Australia, India and Pakistan — plainly explained, with an estimator." },
+      {
+        title: "Freelance Tax Rate: How Much Do Freelancers Pay? | FreelanceRate",
+      },
+      {
+        name: "description",
+        content:
+          "Learn how freelance taxes work, what affects your tax rate, and how self-employed taxes differ across the US, UK, Canada, Australia, India, and Pakistan.",
+      },
     ],
   }),
+
   component: () => (
     <GuideShell
-      breadcrumb="Tax basics by country"
-      title="Freelance Tax Basics by Country: What You Actually Owe"
-      deck="A plain-language tour of self-employment tax in six major freelance markets. This isn't tax advice — it's the vocabulary you need before you talk to an accountant."
+      breadcrumb="Freelance tax basics"
+      title="Freelance Tax Rate: How Much Do Freelancers Pay?"
+      deck="Freelancers usually deal with more than one type of tax. Learn how income tax, self-employment contributions, business expenses, and local rules affect what you actually keep."
       sections={[
-        { h: "The universal shape", body: (
-          <p>Almost every country charges self-employed workers two things: <b>income tax</b> (progressive brackets on your net profit) and a <b>social insurance contribution</b> (a flat-ish % that funds pensions, healthcare, or unemployment). Freelancers pay both halves of the social contribution — where an employee would split it with their employer, you don't.</p>
-        )},
-        { h: "Country snapshots", body: (
-          <ul className="list-disc space-y-2 pl-5">
-            <li><b>US:</b> Federal income tax (10–37%) + self-employment tax (~15.3% up to the Social Security cap) + state tax.</li>
-            <li><b>UK:</b> Income tax (0–45%) + Class 2 and Class 4 National Insurance.</li>
-            <li><b>Canada:</b> Federal income tax (15–33%) + provincial tax + both halves of CPP.</li>
-            <li><b>Australia:</b> Income tax (0–45%) + Medicare Levy (~2%) + optional super contributions.</li>
-            <li><b>India:</b> New regime slabs (0–30%) + 4% cess; GST kicks in above the turnover threshold.</li>
-            <li><b>Pakistan:</b> Salaried slabs generally apply; export-of-services freelancers may qualify for a favorable 1% turnover tax if paid into a proper account.</li>
-          </ul>
-        )},
-        { h: "Run your own estimate", body: (
-          <p>Use our <Link to="/tools/self-employment-tax-estimator">Self-Employment Tax Estimator</Link> to plug your income and expenses into any of these six countries. It'll tell you both the estimated total tax and — crucially — what % of every invoice to set aside the day it clears.</p>
-        )},
-        { h: "When to hire an accountant", body: (
-          <p>The moment you (a) cross a VAT/GST threshold, (b) earn from multiple countries, (c) start thinking about incorporating, or (d) buy any asset over a few thousand dollars. A good local accountant will save more than they cost in year one.</p>
-        )},
+        {
+          h: "How much tax do freelancers pay?",
+          body: (
+            <>
+              <p>
+                There is no single freelance tax rate that applies to everyone.
+                The amount you pay depends on your country, income, deductible
+                business expenses, business structure, and the tax year.
+              </p>
+
+              <p>
+                In many countries, self-employed people may have both an
+                income-tax obligation and separate social-insurance or
+                self-employment contributions.
+              </p>
+
+              <p>
+                That means a freelancer should not simply subtract one
+                percentage from every invoice. Your effective tax burden can
+                change as your income and circumstances change.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "Start with your freelance profit, not your gross invoices",
+          body: (
+            <>
+              <p>
+                Tax calculations often begin with your business profit rather
+                than the total amount you invoiced.
+              </p>
+
+              <p>
+                Your gross freelance income is the money your clients pay you.
+                Your business profit is generally what remains after allowable
+                business expenses, although the exact rules vary by country.
+              </p>
+
+              <p>
+                This distinction matters because a freelancer who earns
+                $50,000 in revenue may have a very different taxable position
+                from another freelancer who earns the same revenue but has
+                substantially different allowable expenses.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "United States: income tax plus self-employment tax",
+          body: (
+            <>
+              <p>
+                US freelancers may have federal income-tax obligations as well
+                as self-employment tax. State and local taxes can also apply
+                depending on where the freelancer lives and operates.
+              </p>
+
+              <p>
+                The self-employment tax system is separate from ordinary
+                federal income-tax brackets, so looking only at an income-tax
+                percentage can underestimate the total amount a freelancer
+                needs to set aside.
+              </p>
+
+              <p>
+                Because thresholds and deductions can change, use current IRS
+                guidance when preparing an actual return rather than relying
+                on a general percentage from an online article.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "United Kingdom: income tax and National Insurance",
+          body: (
+            <>
+              <p>
+                UK self-employed people generally calculate income tax based
+                on taxable profits and may also have National Insurance
+                obligations.
+              </p>
+
+              <p>
+                For the 2026–27 tax year, HMRC states that self-employed people
+                with profits above £12,570 pay Class 4 National Insurance at 6%
+                on profits above that threshold up to £50,270, and 2% above
+                £50,270. Class 2 has also changed and is treated as paid for
+                eligible people above the relevant profit threshold. :contentReference[oaicite:2]{index=2}
+              </p>
+
+              <p>
+                Your actual income-tax position depends on your taxable income,
+                allowances, and circumstances.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "Canada: income tax and CPP contributions",
+          body: (
+            <>
+              <p>
+                Canadian self-employed workers may owe federal and provincial
+                or territorial income tax as well as Canada Pension Plan (CPP)
+                contributions.
+              </p>
+
+              <p>
+                In 2026, the standard CPP contribution rate for self-employed
+                people is 11.9% on the applicable earnings range, because a
+                self-employed person generally pays both the employee and
+                employer portions. Additional CPP2 contributions can apply to
+                earnings above the first earnings ceiling. :contentReference[oaicite:3]{index=3}
+              </p>
+
+              <p>
+                Quebec has a separate pension system, so freelancers there
+                should use the applicable provincial rules.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "Australia: income tax and Medicare",
+          body: (
+            <>
+              <p>
+                Australian freelancers generally report business income as
+                part of their individual tax position. The amount of income tax
+                depends on taxable income and the applicable tax rules.
+              </p>
+
+              <p>
+                The Medicare levy may also affect the final amount owed.
+                Additional obligations can apply depending on the freelancer's
+                business structure and circumstances.
+              </p>
+
+              <p>
+                If you operate as a business rather than simply as an
+                individual sole trader, the rules can be different.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "India: income tax, cess, and GST considerations",
+          body: (
+            <>
+              <p>
+                Indian freelancers generally need to consider income tax on
+                their taxable income. The applicable calculation depends on
+                the tax regime selected and the individual's circumstances.
+              </p>
+
+              <p>
+                GST can also become relevant when a freelancer's services and
+                turnover meet the applicable requirements. Export-of-services
+                rules can introduce additional considerations for freelancers
+                working with overseas clients.
+              </p>
+
+              <p>
+                Because Indian tax rules can depend on the nature of the
+                service, client location, turnover, and registration status,
+                freelancers should check the current rules before filing.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "Pakistan: understand your income and export-of-services position",
+          body: (
+            <>
+              <p>
+                Pakistani freelancers need to consider how their freelance
+                income is classified and how payments are received. Tax
+                treatment can differ depending on the nature of the work,
+                registration status, and whether the income qualifies under
+                rules for export of services.
+              </p>
+
+              <p>
+                If you receive payments from international clients, keep
+                records of invoices, payment receipts, bank transactions, and
+                business expenses. These records can make tax reporting much
+                easier.
+              </p>
+
+              <p>
+                Do not assume that one percentage applies to every Pakistani
+                freelancer. Check the current rules that apply to your specific
+                situation before filing.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "How much should a freelancer set aside for taxes?",
+          body: (
+            <>
+              <p>
+                A practical approach is to reserve part of your freelance
+                income for taxes as soon as you receive it rather than waiting
+                until the filing deadline.
+              </p>
+
+              <p>
+                The percentage you reserve should be based on your estimated
+                taxable profit and local tax rules. It should not be treated as
+                a universal freelance tax rate.
+              </p>
+
+              <p>
+                Our{" "}
+                <Link to="/tools/self-employment-tax-estimator">
+                  Self-Employment Tax Estimator
+                </Link>{" "}
+                can help you create a starting estimate using your income and
+                expenses.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "Common freelance tax mistakes",
+          body: (
+            <>
+              <ul className="list-disc space-y-2 pl-5">
+                <li>
+                  Treating gross client payments as the same thing as taxable
+                  profit.
+                </li>
+                <li>
+                  Forgetting to keep records of business expenses.
+                </li>
+                <li>
+                  Waiting until the tax deadline before setting money aside.
+                </li>
+                <li>
+                  Assuming another freelancer's tax percentage applies to you.
+                </li>
+                <li>
+                  Ignoring tax obligations created by international clients.
+                </li>
+                <li>
+                  Using an old tax rate after thresholds or rules have changed.
+                </li>
+              </ul>
+            </>
+          ),
+        },
+
+        {
+          h: "When should you speak to an accountant?",
+          body: (
+            <>
+              <p>
+                Professional tax advice becomes particularly useful when your
+                freelance income grows, you work with clients in multiple
+                countries, you register for VAT or GST, you hire other people,
+                or you create a company.
+              </p>
+
+              <p>
+                An accountant who understands your local rules can also help
+                determine which expenses are deductible and how your business
+                should be structured.
+              </p>
+
+              <p>
+                This guide is educational information, not individualized tax
+                advice.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          h: "The bottom line",
+          body: (
+            <>
+              <p>
+                Freelance taxes are not simply a fixed percentage of every
+                invoice. Your actual tax burden depends on where you live,
+                taxable profit, expenses, business structure, and the rules for
+                the relevant tax year.
+              </p>
+
+              <p>
+                The safest approach is to track your income and expenses,
+                reserve money throughout the year, use current official tax
+                guidance, and get professional advice when your situation
+                becomes more complicated.
+              </p>
+            </>
+          ),
+        },
       ]}
       related={[
         "/tools/self-employment-tax-estimator",
