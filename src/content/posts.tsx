@@ -866,7 +866,6 @@ export const POSTS: Record<string, PostContent> = {
     "/tools/billable-utilization-rate-calculator",
   ],
 },
-},
 
   "best-payment-methods-for-international-freelancers": {
     ...base("best-payment-methods-for-international-freelancers"),
