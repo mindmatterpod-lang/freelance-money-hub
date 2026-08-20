@@ -511,6 +511,17 @@ export const POSTS: Record<string, PostContent> = {
       body: (
         <>
           <p>
+            When a request falls outside the original scope, use a change order before starting additional work.
+          </p>
+        </>
+      ),
+    },
+  ],
+  related: [
+    "/tools/scope-creep-cost-calculator",
+  ],
+}, // <-- Closes the PREVIOUS post object
+
 "how-to-avoid-scope-creep": {
   ...base("how-to-avoid-scope-creep"),
 
