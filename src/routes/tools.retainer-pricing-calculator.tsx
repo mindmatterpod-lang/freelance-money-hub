@@ -68,7 +68,7 @@ export const Route = createFileRoute("/tools/retainer-pricing-calculator")({
         {
           name: "description",
           content:
-            "Calculate monthly retainer fees, compare retainer vs hourly rates, set overage pricing, and model annual contract values for freelance services.",
+            "Calculate monthly retainer fees, compare retainer Vs hourly rates, set overage pricing, and model annual contract values for freelance services.",
         },
         {
           name: "keywords",
