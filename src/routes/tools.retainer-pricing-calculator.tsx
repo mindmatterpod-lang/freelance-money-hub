@@ -4,10 +4,9 @@ import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell
 import { Input } from "@/components/ui/input";
 
 const SITE_URL = "https://freelance-money-hub.vercel.app";
-const PATH = "/tools/retainer-pricing-calculator";
-const FULL_URL = `${SITE_URL}${PATH}`;
+const FULL_URL = "https://freelance-money-hub.vercel.app/tools/retainer-pricing-calculator";
 
-export const Route = createFileRoute(PATH)({
+export const Route = createFileRoute("/tools/retainer-pricing-calculator")({
   head: () => {
     // 1. JSON-LD WebApplication Schema
     const webAppSchema = {
@@ -26,7 +25,7 @@ export const Route = createFileRoute(PATH)({
         "Calculate monthly retainer fees, effective hourly rates, overage pricing, and annual contract value for freelance clients.",
     };
 
-    // 2. JSON-LD FAQ Schema (Targets impressions from GSC queries)
+    // 2. JSON-LD FAQ Schema
     const faqData = [
       {
         q: "What is a monthly retainer fee?",
@@ -127,7 +126,7 @@ function Page() {
 
   return (
     <ToolShell
-      toolKey={PATH}
+      toolKey="/tools/retainer-pricing-calculator"
       h1="Monthly Retainer Pricing Calculator"
       tagline="Calculate predictable monthly retainer fees and effective hourly rates."
       intro="Set your monthly hour block, apply a commitment discount, and calculate your effective hourly rate, overage rates, and annual contract value."
