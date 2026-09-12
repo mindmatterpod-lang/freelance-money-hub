@@ -112,7 +112,7 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
                 with profits above £12,570 pay Class 4 National Insurance at 6%
                 on profits above that threshold up to £50,270, and 2% above
                 £50,270. Class 2 has also changed and is treated as paid for
-                eligible people above the relevant profit threshold. :contentReference[oaicite:2]{index=2}
+                eligible people above the relevant profit threshold.
               </p>
 
               <p>
@@ -138,7 +138,7 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
                 people is 11.9% on the applicable earnings range, because a
                 self-employed person generally pays both the employee and
                 employer portions. Additional CPP2 contributions can apply to
-                earnings above the first earnings ceiling. :contentReference[oaicite:3]{index=3}
+                earnings above the first earnings ceiling.
               </p>
 
               <p>
