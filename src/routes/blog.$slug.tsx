@@ -1,11 +1,26 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
+import { createIsomorphicFn } from "@tanstack/react-start";
+import { setResponseStatus } from "@tanstack/react-start/server";
 import { BlogShell } from "@/components/site/BlogShell";
 import { POSTS } from "@/content/posts";
+
+// setResponseStatus is server-only; createIsomorphicFn keeps it out of the
+// client bundle while still calling it during SSR.
+const markNotFoundStatus = createIsomorphicFn()
+  .server(() => {
+    setResponseStatus(404);
+  })
+  .client(() => {});
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const post = POSTS[params.slug];
-    if (!post) throw notFound();
+    if (!post) {
+      // Reply with a real 404 instead of a 200 "not found" page — the
+      // latter is what Google Search Console flags as a Soft 404.
+      markNotFoundStatus();
+      throw notFound();
+    }
     return { title: post.title, description: post.metaDescription, slug: params.slug };
   },
   head: ({ loaderData }) => {
