@@ -56,7 +56,7 @@ export const POSTS: Record<string, PostContent> = {
         </>
       )},
     ],
-    related: ["/tools/freelance-hourly-rate-calculator", "/tools/self-employment-tax-estimator", "/tools/billable-utilization-rate-calculator"],
+    related: ["/tools/freelance-hourly-rate-calculator", "/tools/self-employment-tax-estimator", "/tools/billable-utilization-rate-calculator", "/guides/how-to-set-your-freelance-rate"],
   },
 
   "freelance-rate-negotiation-scripts": {
@@ -189,7 +189,7 @@ export const POSTS: Record<string, PostContent> = {
         </>
       )},
     ],
-    related: ["/tools/project-quote-calculator", "/tools/retainer-pricing-calculator", "/tools/freelance-hourly-rate-calculator"],
+    related: ["/tools/project-quote-calculator", "/tools/retainer-pricing-calculator", "/tools/freelance-hourly-rate-calculator", "/guides/how-to-price-a-fixed-bid-project"],
   },
 
   "how-to-get-clients-to-pay-on-time": {
@@ -280,7 +280,7 @@ export const POSTS: Record<string, PostContent> = {
         </>
       )},
     ],
-    related: ["/tools/self-employment-tax-estimator", "/tools/vat-gst-invoice-calculator", "/tools/freelance-profit-margin-calculator"],
+    related: ["/tools/self-employment-tax-estimator", "/tools/vat-gst-invoice-calculator", "/tools/freelance-profit-margin-calculator", "/guides/freelance-tax-basics-by-country"],
   },
 
   "how-to-avoid-scope-creep": {
@@ -918,7 +918,7 @@ export const POSTS: Record<string, PostContent> = {
         </>
       )},
     ],
-    related: ["/tools/payment-processing-fee-calculator", "/tools/currency-adjusted-rate-calculator", "/tools/vat-gst-invoice-calculator"],
+    related: ["/tools/payment-processing-fee-calculator", "/tools/currency-adjusted-rate-calculator", "/tools/vat-gst-invoice-calculator", "/guides/how-to-invoice-international-clients"],
   },
 
   "freelance-emergency-fund-how-much": {

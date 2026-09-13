@@ -1147,6 +1147,8 @@ export const Route = createFileRoute(
         "/tools/currency-adjusted-rate-calculator",
         "/tools/invoice-late-fee-calculator",
         "/tools/days-to-invoice-payment-calculator",
+        "/blog/best-payment-methods-for-international-freelancers",
+        "/guides/freelance-tax-basics-by-country",
       ]}
     />
   ),

@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
-import { ALL_TOOLS, type ToolKey } from "@/components/site/ToolShell";
+import { resolveRelated } from "@/components/site/RelatedContent";
 
 type GuideSection = {
   h: string;
@@ -21,11 +21,11 @@ export function GuideShell({
   title: string;
   deck: string;
   sections: GuideSection[];
-  related: ToolKey[];
+  related: string[];
   breadcrumb: string;
   faqs?: { q: string; a: string }[];
 }) {
-  const tools = ALL_TOOLS.filter((t) => related.includes(t.to));
+  const relatedItems = resolveRelated(related);
   const faqJsonLd = faqs.length
     ? {
         "@context": "https://schema.org",
@@ -166,8 +166,8 @@ export function GuideShell({
           </div>
         </article>
 
-        {/* TOOLS */}
-        {tools.length > 0 && (
+        {/* RELATED */}
+        {relatedItems.length > 0 && (
           <section className="mx-auto max-w-6xl px-4 pb-20 md:px-6">
             <div className="rounded-3xl border bg-card/60 p-6 shadow-soft backdrop-blur md:p-8">
               <div className="max-w-2xl">
@@ -176,7 +176,7 @@ export function GuideShell({
                 </span>
 
                 <h2 className="mt-2 font-display text-2xl font-bold md:text-3xl">
-                  Tools mentioned in this guide
+                  Related tools and reading
                 </h2>
 
                 <p className="mt-3 text-sm leading-6 text-muted-foreground md:text-base">
@@ -186,10 +186,10 @@ export function GuideShell({
               </div>
 
               <div className="mt-7 grid gap-4 md:grid-cols-3">
-                {tools.map((tool) => (
+                {relatedItems.map((item) => (
                   <Link
-                    key={tool.to}
-                    to={tool.to}
+                    key={item.to}
+                    to={item.to}
                     className="
                       group
                       rounded-2xl
@@ -203,16 +203,20 @@ export function GuideShell({
                       hover:shadow-glow
                     "
                   >
-                    <h3 className="font-semibold text-foreground">
-                      {tool.title}
+                    <span className="inline-block rounded-full bg-secondary px-2 py-0.5 text-xs font-medium text-muted-foreground">
+                      {item.kind}
+                    </span>
+
+                    <h3 className="mt-2 font-semibold text-foreground">
+                      {item.title}
                     </h3>
 
                     <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                      {tool.blurb}
+                      {item.blurb}
                     </p>
 
                     <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand">
-                      Open tool
+                      {item.cta}
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </Link>
@@ -630,6 +634,8 @@ export const Route = createFileRoute(
         "/tools/freelance-hourly-rate-calculator",
         "/tools/annual-income-to-hourly-rate-calculator",
         "/tools/project-quote-calculator",
+        "/blog/how-much-should-a-freelancer-charge-per-hour",
+        "/guides/freelance-tax-basics-by-country",
       ]}
     />
   ),

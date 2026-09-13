@@ -4,29 +4,9 @@ import { ChevronRight } from "lucide-react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { EmailCapture } from "./EmailCapture";
+import { resolveRelated, type ToolKey } from "./RelatedContent";
 
-export const ALL_TOOLS = [
-  { to: "/tools/freelance-hourly-rate-calculator", title: "Freelance Hourly Rate Calculator", blurb: "Turn your target income into a rate that actually covers your business." },
-  { to: "/tools/project-quote-calculator", title: "Project Quote Calculator", blurb: "Price fixed-bid projects with a built-in risk buffer and deposit." },
-  { to: "/tools/invoice-late-fee-calculator", title: "Invoice Late Fee Calculator", blurb: "Calculate fair late fees and generate a reminder email." },
-  { to: "/tools/self-employment-tax-estimator", title: "Self-Employment Tax Estimator", blurb: "Rough tax owed and how much to set aside per invoice." },
-  { to: "/tools/currency-adjusted-rate-calculator", title: "Currency-Adjusted Rate", blurb: "See your real take-home after FX and payment platform fees." },
-  { to: "/tools/annual-income-to-hourly-rate-calculator", title: "Salary → Freelance Hourly", blurb: "The hourly rate that actually matches your old day job salary." },
-  { to: "/tools/freelance-profit-margin-calculator", title: "Freelance Profit Margin", blurb: "Gross margin, net margin, and break-even project count." },
-  { to: "/tools/days-to-invoice-payment-calculator", title: "Cash Flow / Payment Date", blurb: "When each invoice actually lands, with overlap warnings." },
-  { to: "/tools/freelance-day-rate-calculator", title: "Freelance Day Rate Calculator", blurb: "Convert your hourly rate into a defensible day rate." },
-  { to: "/tools/retainer-pricing-calculator", title: "Monthly Retainer Calculator", blurb: "Price a retainer with the right hour block and discount." },
-  { to: "/tools/rate-increase-calculator", title: "Rate Increase Calculator", blurb: "See the income impact of raising rates — even if clients leave." },
-  { to: "/tools/payment-processing-fee-calculator", title: "Payment Fee Calculator", blurb: "What PayPal, Wise, Stripe and Payoneer really cost you." },
-  { to: "/tools/vat-gst-invoice-calculator", title: "VAT / GST Invoice Calculator", blurb: "Add or strip VAT/GST and get a clean invoice breakdown." },
-  { to: "/tools/scope-creep-cost-calculator", title: "Scope Creep Cost Calculator", blurb: "Price the 'quick extra' before you agree to it." },
-  { to: "/tools/freelance-emergency-fund-calculator", title: "Emergency Fund Calculator", blurb: "How much runway you need before slow months hurt." },
-  { to: "/tools/client-discount-calculator", title: "Discount Impact Calculator", blurb: "How many extra hours a 'small' discount really costs." },
-  { to: "/tools/billable-utilization-rate-calculator", title: "Billable Utilization Calculator", blurb: "What share of your week is actually earning money." },
-] as const;
-
-
-export type ToolKey = (typeof ALL_TOOLS)[number]["to"];
+export { ALL_TOOLS, type ToolKey } from "./RelatedContent";
 
 export interface FaqItem { q: string; a: string }
 
@@ -40,11 +20,11 @@ interface Props {
   why: string;
   mistakes: string[];
   faqs: FaqItem[];
-  related: ToolKey[];
+  related: string[];
 }
 
 export function ToolShell({ toolKey, h1, tagline, intro, calculator, works, why, mistakes, faqs, related }: Props) {
-  const relatedTools = ALL_TOOLS.filter((t) => related.includes(t.to));
+  const relatedItems = resolveRelated(related);
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -140,19 +120,20 @@ export function ToolShell({ toolKey, h1, tagline, intro, calculator, works, why,
 
         {/* Related */}
         <section className="mx-auto max-w-5xl px-4 pb-16 md:px-6">
-          <h2 className="font-display text-2xl font-bold">Related tools</h2>
+          <h2 className="font-display text-2xl font-bold">Related</h2>
           <div className="mt-5 grid gap-4 md:grid-cols-3">
-            {relatedTools.map((t) => (
+            {relatedItems.map((item) => (
               <Link
-                key={t.to}
-                to={t.to}
+                key={item.to}
+                to={item.to}
                 className="group relative overflow-hidden rounded-2xl border bg-card p-5 shadow-soft transition-all hover:-translate-y-1 hover:shadow-glow"
               >
                 <div className="absolute inset-0 bg-gradient-brand opacity-0 transition-opacity group-hover:opacity-5" />
-                <h3 className="font-semibold">{t.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{t.blurb}</p>
+                <span className="inline-block rounded-full bg-secondary px-2 py-0.5 text-xs font-medium text-muted-foreground">{item.kind}</span>
+                <h3 className="mt-2 font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{item.blurb}</p>
                 <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-brand">
-                  Open tool <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  {item.cta} <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
             ))}

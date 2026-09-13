@@ -36,6 +36,8 @@ export const Route = createFileRoute("/guides/how-to-price-a-fixed-bid-project")
         "/tools/project-quote-calculator",
         "/tools/freelance-hourly-rate-calculator",
         "/tools/invoice-late-fee-calculator",
+        "/blog/hourly-vs-fixed-price-vs-value-based-pricing",
+        "/guides/how-to-set-your-freelance-rate",
       ]}
     />
   ),
