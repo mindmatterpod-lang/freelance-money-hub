@@ -13,7 +13,6 @@ export const Route = createFileRoute("/tools/scope-creep-cost-calculator")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/tools/scope-creep-cost-calculator" }],
   }),
   component: Page,
 });

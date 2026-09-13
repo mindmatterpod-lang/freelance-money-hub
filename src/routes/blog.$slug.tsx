@@ -37,7 +37,6 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:url", content: `/blog/${loaderData.slug}` },
         { name: "twitter:card", content: "summary_large_image" },
       ],
-      links: [{ rel: "canonical", href: `/blog/${loaderData.slug}` }],
     };
   },
   component: Post,

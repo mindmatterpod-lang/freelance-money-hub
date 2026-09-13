@@ -13,7 +13,6 @@ export const Route = createFileRoute("/tools/client-discount-calculator")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/tools/client-discount-calculator" }],
   }),
   component: Page,
 });

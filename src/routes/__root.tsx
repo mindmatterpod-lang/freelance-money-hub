@@ -73,7 +73,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  head: (ctx) => {
+    const leafMatch = ctx.matches[ctx.matches.length - 1];
+    const pathname = leafMatch?.pathname ?? "/";
+    const canonicalUrl = `https://freelance-money-hub.vercel.app${pathname}`;
+
+    return {
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -123,6 +128,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 },
     ],
     links: [
+      { rel: "canonical", href: canonicalUrl },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -151,7 +157,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   }),
 },
     ],
-  }),
+    };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

@@ -91,7 +91,6 @@ export const Route = createFileRoute("/tools/retainer-pricing-calculator")({
             "Calculate effective hourly rates, overage rates, and monthly retainer fees for your freelance business.",
         },
       ],
-      links: [{ rel: "canonical", href: FULL_URL }],
       scripts: [
         {
           type: "application/ld+json",
