@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { SUPPORT_EMAIL } from "@/lib/site-config";
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
@@ -28,7 +29,7 @@ function Privacy() {
           <h2 className="font-display text-xl font-semibold text-foreground">Third-party services</h2>
           <p>The Currency-Adjusted Rate Calculator queries the public Frankfurter API for live exchange rates. Only the currency pair — never your amounts — is sent.</p>
           <h2 className="font-display text-xl font-semibold text-foreground">Contact</h2>
-          <p>Questions about privacy? Email hello@freelancerate.example.</p>
+          <p>Questions about privacy? Email {SUPPORT_EMAIL}.</p>
         </div>
       </main>
       <Footer />

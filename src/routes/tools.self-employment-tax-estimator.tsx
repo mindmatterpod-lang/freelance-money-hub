@@ -162,7 +162,7 @@ function Page() {
         "Not deducting legitimate business expenses (software, home office, hardware).",
       ]}
       faqs={[
-        { q: "Is this tool tax advice?", a: "No. It's an estimate based on publicly published brackets. For anything binding, speak to a local accountant." },
+        { q: "Is this tool tax advice?", a: "No. It's an estimate based on publicly published brackets from each country's tax authority (see how we source the numbers on our About page). For anything binding, speak to a local accountant." },
         { q: "Why is the ‘set aside’ % higher than the effective rate?", a: "Because the % is applied to gross income, before you deduct expenses — that way you always have enough put aside." },
         { q: "Do you support state / provincial tax?", a: "Not yet. The estimate is federal / central only, so it will be conservative in high-tax states." },
         { q: "How much tax do freelancers actually pay?", a: "It depends on income and country, but most freelancers pay both regular income tax and a self-employment surcharge — for example, ~15.3% Social Security + Medicare in the US, or Class 4 National Insurance in the UK — on top of their income tax bracket. Run your numbers above for a country-specific estimate." },

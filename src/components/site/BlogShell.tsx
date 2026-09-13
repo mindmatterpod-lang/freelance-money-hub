@@ -49,7 +49,7 @@ export function BlogShell({
               <span className="text-foreground">{category}</span>
             </nav>
             <span className="inline-flex rounded-full glass px-3 py-1 text-xs font-medium text-brand animate-fade-up">
-              {category} · {readMins} min read
+              {category} · {readMins} min read · By FreelanceRate
             </span>
             <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-5xl animate-fade-up">{title}</h1>
             <p className="mt-4 text-lg text-muted-foreground animate-fade-up" style={{ animationDelay: "60ms" }}>{deck}</p>

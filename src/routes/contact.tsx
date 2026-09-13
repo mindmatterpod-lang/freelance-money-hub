@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Mail, MessageSquare, Bug } from "lucide-react";
+import { SUPPORT_EMAIL } from "@/lib/site-config";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -15,9 +16,9 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const items = [
-    { icon: MessageSquare, title: "Feature requests", body: "Missing a calculator? Tell us what you'd type into Google.", href: "mailto:hello@freelancerate.example?subject=Feature%20request" },
-    { icon: Bug, title: "Bugs & wrong numbers", body: "Found an incorrect tax bracket or a broken calculation? Send it over.", href: "mailto:hello@freelancerate.example?subject=Bug%20report" },
-    { icon: Mail, title: "Everything else", body: "Partnerships, press, or a friendly hello.", href: "mailto:hello@freelancerate.example" },
+    { icon: MessageSquare, title: "Feature requests", body: "Missing a calculator? Tell us what you'd type into Google.", href: `mailto:${SUPPORT_EMAIL}?subject=Feature%20request` },
+    { icon: Bug, title: "Bugs & wrong numbers", body: "Found an incorrect tax bracket or a broken calculation? Send it over.", href: `mailto:${SUPPORT_EMAIL}?subject=Bug%20report` },
+    { icon: Mail, title: "Everything else", body: "Partnerships, press, or a friendly hello.", href: `mailto:${SUPPORT_EMAIL}` },
   ];
   return (
     <div className="min-h-screen">
