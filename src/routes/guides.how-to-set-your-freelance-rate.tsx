@@ -16,14 +16,27 @@ export function GuideShell({
   sections,
   related,
   breadcrumb,
+  faqs = [],
 }: {
   title: string;
   deck: string;
   sections: GuideSection[];
   related: ToolKey[];
   breadcrumb: string;
+  faqs?: { q: string; a: string }[];
 }) {
   const tools = ALL_TOOLS.filter((t) => related.includes(t.to));
+  const faqJsonLd = faqs.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -209,6 +222,23 @@ export function GuideShell({
           </section>
         )}
 
+        {faqs.length > 0 && (
+          <section className="mx-auto max-w-4xl px-4 pb-16 md:px-6">
+            <h2 className="font-display text-2xl font-bold">Frequently asked questions</h2>
+            <div className="mt-4 space-y-3">
+              {faqs.map((f) => (
+                <details key={f.q} className="group rounded-2xl border bg-card p-5 transition-colors open:bg-secondary/50">
+                  <summary className="cursor-pointer list-none font-medium flex items-center justify-between gap-4">
+                    {f.q}
+                    <ChevronRight className="h-4 w-4 flex-shrink-0 transition-transform group-open:rotate-90" />
+                  </summary>
+                  <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* FINAL CTA */}
         <section className="mx-auto max-w-4xl px-4 pb-20 md:px-6">
           <div className="relative overflow-hidden rounded-3xl border bg-card p-7 shadow-soft md:p-10">
@@ -254,6 +284,9 @@ export function GuideShell({
       </main>
 
       <Footer />
+      {faqJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
     </div>
   );
 }

@@ -335,6 +335,24 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
         "/tools/freelance-profit-margin-calculator",
         "/tools/freelance-hourly-rate-calculator",
       ]}
+      faqs={[
+        {
+          q: "What is the tax rate for freelancers?",
+          a: "There's no single freelance tax rate — it depends on your country, income level, and business structure. Freelancers typically pay regular income tax on their profit (revenue minus business expenses) plus, in many countries, a separate self-employment or social-insurance contribution on top. Use the Self-Employment Tax Estimator above to see a country-specific ballpark.",
+        },
+        {
+          q: "How much can you earn freelancing before paying tax?",
+          a: "Most countries have a tax-free threshold or standard deduction below which no income tax is owed, but it varies widely — for example the UK's personal allowance, Australia's tax-free threshold, and similar bands in the US, Canada, India, and Pakistan. Below that threshold you may still owe self-employment or social-insurance contributions even if income tax is zero, so check your specific country's current rules.",
+        },
+        {
+          q: "Do freelancers pay GST or VAT on top of income tax?",
+          a: "In many countries, yes — once your freelance turnover crosses a registration threshold, you may need to charge and remit GST or VAT in addition to paying income tax on your profit. This is separate from income tax and depends on your local turnover rules and whether your clients are domestic or international.",
+        },
+        {
+          q: "Is freelance income taxed differently from a salary?",
+          a: "Usually, yes. As a freelancer you're generally taxed on your net profit (what's left after deducting legitimate business expenses) rather than gross pay, and in many countries you're also responsible for a self-employment or social-insurance contribution that an employer would otherwise share or cover for a salaried worker.",
+        },
+      ]}
     />
   ),
 });

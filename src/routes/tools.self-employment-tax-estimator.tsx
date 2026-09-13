@@ -165,6 +165,9 @@ function Page() {
         { q: "Is this tool tax advice?", a: "No. It's an estimate based on publicly published brackets. For anything binding, speak to a local accountant." },
         { q: "Why is the ‘set aside’ % higher than the effective rate?", a: "Because the % is applied to gross income, before you deduct expenses — that way you always have enough put aside." },
         { q: "Do you support state / provincial tax?", a: "Not yet. The estimate is federal / central only, so it will be conservative in high-tax states." },
+        { q: "How much tax do freelancers actually pay?", a: "It depends on income and country, but most freelancers pay both regular income tax and a self-employment surcharge — for example, ~15.3% Social Security + Medicare in the US, or Class 4 National Insurance in the UK — on top of their income tax bracket. Run your numbers above for a country-specific estimate." },
+        { q: "What is the self-employment tax rate?", a: "In the US it's 15.3% (Social Security + Medicare) on top of federal income tax. In the UK it's Class 2/4 National Insurance (~6% approximated here) on top of income tax. Canada adds both halves of CPP (~11.9%). Other countries in this tool use income tax brackets only, since they don't have a separate self-employment surcharge." },
+        { q: "How much can I earn freelancing before paying tax?", a: "It depends on your country's tax-free threshold — for example $0 taxable band varies by system, but the UK's is £12,570, Australia's is AUD 18,200, India's new regime starts at ₹300,000, and Pakistan's is PKR 600,000. The US has no flat threshold but a standard deduction reduces taxable income. Select your country above to see the exact bracket." },
       ]}
       related={[
         "/tools/freelance-hourly-rate-calculator",
