@@ -245,6 +245,7 @@ export const POSTS: Record<string, PostContent> = {
       { h: "A caveat worth reading", body: (
         <>
           <p>Rules differ by country and change often. This is a checklist to discuss with a qualified accountant in your jurisdiction, not tax advice. Official tax authority guidance always wins over anything you read online.</p>
+          <p>For how income tax, self-employment contributions, and country-specific rules fit together, see our <Link to="/guides/freelance-tax-basics-by-country">freelance tax basics guide</Link> — this checklist covers deductions specifically, that guide covers the bigger picture.</p>
         </>
       )},
       { h: "Commonly deductible categories", body: (
@@ -913,6 +914,7 @@ export const POSTS: Record<string, PostContent> = {
       { h: "Don't forget tax paperwork", body: (
         <>
           <p>Cross-border invoices often need VAT/GST treatment, reverse charge notes, or a tax ID on the document. The <Link to="/tools/vat-gst-invoice-calculator">VAT/GST calculator</Link> gives you a clean breakdown to copy onto the invoice.</p>
+          <p>For the full invoice structure — numbering, payment terms, currency clauses, and what to do about late payers — see our <Link to="/guides/how-to-invoice-international-clients">guide to invoicing international clients</Link>.</p>
         </>
       )},
     ],

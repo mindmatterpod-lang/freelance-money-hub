@@ -507,7 +507,13 @@ export const Route = createFileRoute(
               <p>
                 The cheapest option for you isn't always the easiest option
                 for the client. Choose the payment arrangement together before
-                issuing the invoice.
+                issuing the invoice. For a deeper comparison of specific
+                providers — Wise, Payoneer, PayPal, Stripe, and bank wires —
+                see{" "}
+                <Link to="/blog/best-payment-methods-for-international-freelancers">
+                  our breakdown of the best payment methods for international freelancers
+                </Link>
+                .
               </p>
             </>
           ),

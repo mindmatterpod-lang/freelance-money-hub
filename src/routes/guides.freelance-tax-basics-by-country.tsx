@@ -280,6 +280,14 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
                   Using an old tax rate after thresholds or rules have changed.
                 </li>
               </ul>
+              <p className="mt-4">
+                For the specific categories of business expenses freelancers
+                commonly deduct, see our{" "}
+                <Link to="/blog/freelance-tax-deductions-checklist">
+                  freelance tax deductions checklist
+                </Link>
+                .
+              </p>
             </>
           ),
         },
