@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useRouterState } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
@@ -26,6 +26,26 @@ export function GuideShell({
   faqs?: { q: string; a: string }[];
 }) {
   const relatedItems = resolveRelated(related);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const pageUrl = `https://freelance-money-hub.vercel.app${pathname}`;
+  const guideJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description: deck,
+      mainEntityOfPage: pageUrl,
+      publisher: { "@type": "Organization", name: "FreelanceRate" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://freelance-money-hub.vercel.app/" },
+        { "@type": "ListItem", position: 2, name: breadcrumb, item: pageUrl },
+      ],
+    },
+  ];
   const faqJsonLd = faqs.length
     ? {
         "@context": "https://schema.org",
@@ -288,6 +308,9 @@ export function GuideShell({
       </main>
 
       <Footer />
+      {guideJsonLd.map((ld, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
+      ))}
       {faqJsonLd && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       )}

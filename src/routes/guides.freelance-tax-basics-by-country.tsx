@@ -340,6 +340,7 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
       ]}
       related={[
         "/tools/self-employment-tax-estimator",
+        "/tools/freelance-tax-set-aside-calculator",
         "/tools/freelance-profit-margin-calculator",
         "/tools/freelance-hourly-rate-calculator",
         "/blog/freelance-tax-deductions-checklist",

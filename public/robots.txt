@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://freelance-money-hub.vercel.app/sitemap.xml

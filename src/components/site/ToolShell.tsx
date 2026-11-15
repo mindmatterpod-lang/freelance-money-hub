@@ -44,6 +44,16 @@ export function ToolShell({ toolKey, h1, tagline, intro, calculator, works, why,
     description: tagline,
   };
 
+  const base = "https://freelance-money-hub.vercel.app";
+  const crumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${base}/` },
+      { "@type": "ListItem", position: 2, name: h1, item: `${base}${toolKey}` },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
       <Nav />
@@ -144,6 +154,7 @@ export function ToolShell({ toolKey, h1, tagline, intro, calculator, works, why,
       <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbJsonLd) }} />
     </div>
   );
 }

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
       { title: "FreelanceRate — Free money tools for freelancers worldwide" },
       { name: "description", content: "A free toolkit of calculators to price freelance work, estimate taxes, convert currencies, and manage cash flow. No signup, works worldwide." },
       { property: "og:title", content: "FreelanceRate — Free money tools for freelancers" },
-      { property: "og:description", content: "Price your work, estimate taxes, and manage cash flow with 8 free calculators built for freelancers." },
+      { property: "og:description", content: "Price your work, estimate taxes, and manage cash flow with 18 free calculators built for freelancers." },
     ],
   }),
   component: Home,
@@ -19,6 +19,7 @@ const tools = [
   { to: "/tools/freelance-hourly-rate-calculator", title: "Freelance Hourly Rate", blurb: "The rate that actually covers your business — not just your rent.", icon: Calculator },
   { to: "/tools/project-quote-calculator", title: "Project Quote", blurb: "Fixed-bid pricing with a built-in risk buffer and deposit.", icon: Scale },
   { to: "/tools/invoice-late-fee-calculator", title: "Invoice Late Fees", blurb: "Fair late fees, plus a copy-paste reminder email.", icon: Receipt },
+  { to: "/tools/freelance-tax-set-aside-calculator", title: "Tax Set-Aside", blurb: "How much of every payment to park for taxes.", icon: TrendingUp },
   { to: "/tools/self-employment-tax-estimator", title: "Tax Estimator", blurb: "Rough tax owed and how much to stash from each invoice.", icon: TrendingUp },
   { to: "/tools/currency-adjusted-rate-calculator", title: "Currency-Adjusted Rate", blurb: "Real take-home after FX and payment platform fees.", icon: Globe2 },
   { to: "/tools/annual-income-to-hourly-rate-calculator", title: "Salary → Hourly", blurb: "The hourly rate that matches your old salary.", icon: Wallet },
@@ -52,7 +53,7 @@ function Home() {
         <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-24 text-center md:pt-32 md:pb-32 md:px-6">
           <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium animate-fade-up">
             <Sparkles className="h-3.5 w-3.5 text-brand" />
-            8 free tools · no signup · works worldwide
+            18 free tools · no signup · works worldwide
           </span>
           <h1 className="mt-6 font-display text-5xl font-bold tracking-tight md:text-7xl animate-fade-up" style={{ animationDelay: "60ms" }}>
             Freelance money,
@@ -71,7 +72,7 @@ function Home() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <a href="#tools" className="rounded-full glass px-6 py-3 text-sm font-semibold">
-              Browse all 8 tools
+              Browse all 18 tools
             </a>
           </div>
 
