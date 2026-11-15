@@ -20,6 +20,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/tools/project-quote-calculator", changefreq: "monthly", priority: "0.9" },
           { path: "/tools/invoice-late-fee-calculator", changefreq: "monthly", priority: "0.9" },
           { path: "/tools/self-employment-tax-estimator", changefreq: "monthly", priority: "0.9" },
+          { path: "/tools/freelance-tax-set-aside-calculator", changefreq: "monthly", priority: "0.9" },
           { path: "/tools/currency-adjusted-rate-calculator", changefreq: "monthly", priority: "0.9" },
           { path: "/tools/annual-income-to-hourly-rate-calculator", changefreq: "monthly", priority: "0.9" },
           { path: "/tools/freelance-profit-margin-calculator", changefreq: "monthly", priority: "0.9" },

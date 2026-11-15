@@ -7,7 +7,7 @@ export const Route = createFileRoute("/tools/payment-processing-fee-calculator")
   head: () => ({
     meta: [
       { title: "Payment Processing Fee Calculator (PayPal, Wise, Stripe) | FreelanceRate" },
-      { name: "description", content: "See what PayPal, Wise, Stripe, Payoneer or a bank wire really costs on an invoice — including FX markup — and what to gross up to." },
+      { name: "description", content: "Free payment processing fee calculator for PayPal, Stripe, Wise, Payoneer and bank wires. See fees plus FX markup, your net payout and what to invoice to receive the full amount." },
       { property: "og:title", content: "Payment Processing Fee Calculator" },
       { property: "og:description", content: "Real cost of PayPal, Wise, Stripe, Payoneer and bank wires on freelance invoices." },
       { property: "og:type", content: "website" },

@@ -31,6 +31,7 @@ import { Route as ToolsFreelanceDayRateCalculatorRouteImport } from './routes/to
 import { Route as ToolsFreelanceEmergencyFundCalculatorRouteImport } from './routes/tools.freelance-emergency-fund-calculator'
 import { Route as ToolsFreelanceHourlyRateCalculatorRouteImport } from './routes/tools.freelance-hourly-rate-calculator'
 import { Route as ToolsFreelanceProfitMarginCalculatorRouteImport } from './routes/tools.freelance-profit-margin-calculator'
+import { Route as ToolsFreelanceTaxSetAsideCalculatorRouteImport } from './routes/tools.freelance-tax-set-aside-calculator'
 import { Route as ToolsInvoiceLateFeeCalculatorRouteImport } from './routes/tools.invoice-late-fee-calculator'
 import { Route as ToolsPaymentProcessingFeeCalculatorRouteImport } from './routes/tools.payment-processing-fee-calculator'
 import { Route as ToolsProjectQuoteCalculatorRouteImport } from './routes/tools.project-quote-calculator'
@@ -163,6 +164,12 @@ const ToolsFreelanceProfitMarginCalculatorRoute =
     path: '/tools/freelance-profit-margin-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ToolsFreelanceTaxSetAsideCalculatorRoute =
+  ToolsFreelanceTaxSetAsideCalculatorRouteImport.update({
+    id: '/tools/freelance-tax-set-aside-calculator',
+    path: '/tools/freelance-tax-set-aside-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ToolsInvoiceLateFeeCalculatorRoute =
   ToolsInvoiceLateFeeCalculatorRouteImport.update({
     id: '/tools/invoice-late-fee-calculator',
@@ -234,6 +241,7 @@ export interface FileRoutesByFullPath {
   '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
   '/tools/freelance-profit-margin-calculator': typeof ToolsFreelanceProfitMarginCalculatorRoute
+  '/tools/freelance-tax-set-aside-calculator': typeof ToolsFreelanceTaxSetAsideCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
   '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
@@ -266,6 +274,7 @@ export interface FileRoutesByTo {
   '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
   '/tools/freelance-profit-margin-calculator': typeof ToolsFreelanceProfitMarginCalculatorRoute
+  '/tools/freelance-tax-set-aside-calculator': typeof ToolsFreelanceTaxSetAsideCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
   '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
@@ -299,6 +308,7 @@ export interface FileRoutesById {
   '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
   '/tools/freelance-profit-margin-calculator': typeof ToolsFreelanceProfitMarginCalculatorRoute
+  '/tools/freelance-tax-set-aside-calculator': typeof ToolsFreelanceTaxSetAsideCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
   '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
@@ -333,6 +343,7 @@ export interface FileRouteTypes {
     | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
     | '/tools/freelance-profit-margin-calculator'
+    | '/tools/freelance-tax-set-aside-calculator'
     | '/tools/invoice-late-fee-calculator'
     | '/tools/payment-processing-fee-calculator'
     | '/tools/project-quote-calculator'
@@ -365,6 +376,7 @@ export interface FileRouteTypes {
     | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
     | '/tools/freelance-profit-margin-calculator'
+    | '/tools/freelance-tax-set-aside-calculator'
     | '/tools/invoice-late-fee-calculator'
     | '/tools/payment-processing-fee-calculator'
     | '/tools/project-quote-calculator'
@@ -397,6 +409,7 @@ export interface FileRouteTypes {
     | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
     | '/tools/freelance-profit-margin-calculator'
+    | '/tools/freelance-tax-set-aside-calculator'
     | '/tools/invoice-late-fee-calculator'
     | '/tools/payment-processing-fee-calculator'
     | '/tools/project-quote-calculator'
@@ -430,6 +443,7 @@ export interface RootRouteChildren {
   ToolsFreelanceEmergencyFundCalculatorRoute: typeof ToolsFreelanceEmergencyFundCalculatorRoute
   ToolsFreelanceHourlyRateCalculatorRoute: typeof ToolsFreelanceHourlyRateCalculatorRoute
   ToolsFreelanceProfitMarginCalculatorRoute: typeof ToolsFreelanceProfitMarginCalculatorRoute
+  ToolsFreelanceTaxSetAsideCalculatorRoute: typeof ToolsFreelanceTaxSetAsideCalculatorRoute
   ToolsInvoiceLateFeeCalculatorRoute: typeof ToolsInvoiceLateFeeCalculatorRoute
   ToolsPaymentProcessingFeeCalculatorRoute: typeof ToolsPaymentProcessingFeeCalculatorRoute
   ToolsProjectQuoteCalculatorRoute: typeof ToolsProjectQuoteCalculatorRoute
@@ -597,6 +611,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsFreelanceProfitMarginCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/freelance-tax-set-aside-calculator': {
+      id: '/tools/freelance-tax-set-aside-calculator'
+      path: '/tools/freelance-tax-set-aside-calculator'
+      fullPath: '/tools/freelance-tax-set-aside-calculator'
+      preLoaderRoute: typeof ToolsFreelanceTaxSetAsideCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/invoice-late-fee-calculator': {
       id: '/tools/invoice-late-fee-calculator'
       path: '/tools/invoice-late-fee-calculator'
@@ -687,6 +708,8 @@ const rootRouteChildren: RootRouteChildren = {
     ToolsFreelanceHourlyRateCalculatorRoute,
   ToolsFreelanceProfitMarginCalculatorRoute:
     ToolsFreelanceProfitMarginCalculatorRoute,
+  ToolsFreelanceTaxSetAsideCalculatorRoute:
+    ToolsFreelanceTaxSetAsideCalculatorRoute,
   ToolsInvoiceLateFeeCalculatorRoute: ToolsInvoiceLateFeeCalculatorRoute,
   ToolsPaymentProcessingFeeCalculatorRoute:
     ToolsPaymentProcessingFeeCalculatorRoute,

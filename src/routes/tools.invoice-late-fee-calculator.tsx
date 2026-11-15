@@ -7,12 +7,12 @@ export const Route = createFileRoute("/tools/invoice-late-fee-calculator")({
   head: () => ({
     meta: [
       {
-        title: "Invoice Late Fee Calculator — Calculate Overdue Invoice Fees | FreelanceRate",
+        title: "Late Fee Calculator for Invoices (Free) | FreelanceRate",
       },
       {
         name: "description",
         content:
-          "Calculate late fees on overdue invoices using a monthly or daily rate. Get the fee, new invoice total, and a professional payment reminder email.",
+          "Free late fee calculator for overdue invoices. Enter the amount, days late and a monthly or daily rate to get the fee, the new total and a ready-to-send reminder email.",
       },
     ],
   }),

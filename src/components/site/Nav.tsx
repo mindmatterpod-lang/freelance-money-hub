@@ -7,6 +7,7 @@ const tools = [
   { to: "/tools/project-quote-calculator", label: "Project Quote" },
   { to: "/tools/invoice-late-fee-calculator", label: "Late Fee" },
   { to: "/tools/self-employment-tax-estimator", label: "Tax Estimator" },
+  { to: "/tools/freelance-tax-set-aside-calculator", label: "Tax Set-Aside" },
   { to: "/tools/currency-adjusted-rate-calculator", label: "Currency Rate" },
   { to: "/tools/annual-income-to-hourly-rate-calculator", label: "Salary → Hourly" },
   { to: "/tools/freelance-profit-margin-calculator", label: "Profit Margin" },

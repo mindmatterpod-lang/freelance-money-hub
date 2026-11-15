@@ -8,7 +8,7 @@ export const Route = createFileRoute(
     meta: [
       {
         title:
-          "How to Invoice International Clients as a Freelancer | Freelance Money Hub",
+          "How to Invoice International Clients: Step-by-Step Guide | FreelanceRate",
       },
       {
         name: "description",

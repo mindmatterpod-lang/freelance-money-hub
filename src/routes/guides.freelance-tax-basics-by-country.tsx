@@ -5,12 +5,12 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
   head: () => ({
     meta: [
       {
-        title: "Freelance Tax Rate: How Much Do Freelancers Pay? | FreelanceRate",
+        title: "Freelance Tax Rates by Country: How Much Do You Pay? | FreelanceRate",
       },
       {
         name: "description",
         content:
-          "Learn how freelance taxes work, what affects your tax rate, and how self-employed taxes differ across the US, UK, Canada, Australia, India, and Pakistan.",
+          "How much tax do freelancers pay? Compare income tax and self-employment contributions in the US, UK, Canada, Australia, India and Pakistan, plus how much to set aside.",
       },
     ],
   }),

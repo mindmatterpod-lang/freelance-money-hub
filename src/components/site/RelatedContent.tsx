@@ -7,6 +7,7 @@ export const ALL_TOOLS = [
   { to: "/tools/freelance-hourly-rate-calculator", title: "Freelance Hourly Rate Calculator", blurb: "Turn your target income into a rate that actually covers your business." },
   { to: "/tools/project-quote-calculator", title: "Project Quote Calculator", blurb: "Price fixed-bid projects with a built-in risk buffer and deposit." },
   { to: "/tools/invoice-late-fee-calculator", title: "Invoice Late Fee Calculator", blurb: "Calculate fair late fees and generate a reminder email." },
+  { to: "/tools/freelance-tax-set-aside-calculator", title: "Tax Set-Aside Calculator", blurb: "How much of each invoice to park for taxes, per invoice and per quarter." },
   { to: "/tools/self-employment-tax-estimator", title: "Self-Employment Tax Estimator", blurb: "Rough tax owed and how much to set aside per invoice." },
   { to: "/tools/currency-adjusted-rate-calculator", title: "Currency-Adjusted Rate", blurb: "See your real take-home after FX and payment platform fees." },
   { to: "/tools/annual-income-to-hourly-rate-calculator", title: "Salary → Freelance Hourly", blurb: "The hourly rate that actually matches your old day job salary." },
