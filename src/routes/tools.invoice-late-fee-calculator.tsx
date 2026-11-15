@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/tools/invoice-late-fee-calculator")({
 });
 
 function Page() {
+  useCurrency();
   const [amount, setAmount] = useState(2500);
   const [days, setDays] = useState(14);
   const [mode, setMode] = useState<"monthly" | "daily">("monthly");

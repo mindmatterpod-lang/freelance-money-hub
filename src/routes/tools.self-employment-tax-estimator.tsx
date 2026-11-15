@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -96,6 +97,7 @@ function taxOn(income: number, brackets: Country["brackets"]) {
 }
 
 function Page() {
+  useCurrency();
   const [countryCode, setCountryCode] = useState("US");
   const [income, setIncome] = useState(80000);
   const [expenses, setExpenses] = useState(6000);

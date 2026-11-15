@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -14,6 +15,7 @@ export const Route = createFileRoute("/tools/annual-income-to-hourly-rate-calcul
 });
 
 function Page() {
+  useCurrency();
   const [salary, setSalary] = useState(70000);
   const [uplift, setUplift] = useState(35);
   const [days, setDays] = useState(220);

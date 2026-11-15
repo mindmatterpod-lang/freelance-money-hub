@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -18,6 +19,7 @@ export const Route = createFileRoute("/tools/billable-utilization-rate-calculato
 });
 
 function Page() {
+  useCurrency();
   const [worked, setWorked] = useState(45);
   const [billable, setBillable] = useState(24);
   const [rate, setRate] = useState(90);

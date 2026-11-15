@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -14,6 +15,7 @@ export const Route = createFileRoute("/tools/freelance-profit-margin-calculator"
 });
 
 function Page() {
+  useCurrency();
   const [revenue, setRevenue] = useState(5000);
   const [direct, setDirect] = useState(800);
   const [overhead, setOverhead] = useState(1500);

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -18,6 +19,7 @@ export const Route = createFileRoute("/tools/freelance-emergency-fund-calculator
 });
 
 function Page() {
+  useCurrency();
   const [personal, setPersonal] = useState(2200);
   const [business, setBusiness] = useState(400);
   const [months, setMonths] = useState(6);

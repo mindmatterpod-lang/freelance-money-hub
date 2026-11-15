@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { EmailCapture } from "./EmailCapture";
+import { getActiveCurrency, getActiveLocale } from "@/lib/currency";
 import { resolveRelated, type ToolKey } from "./RelatedContent";
 
 export { ALL_TOOLS, type ToolKey } from "./RelatedContent";
@@ -159,9 +160,9 @@ export function ToolShell({ toolKey, h1, tagline, intro, calculator, works, why,
   );
 }
 
-export function formatMoney(n: number, currency = "USD") {
+export function formatMoney(n: number, currency = getActiveCurrency()) {
   if (!isFinite(n)) return "—";
-  return new Intl.NumberFormat("en-US", { style: "currency", currency, maximumFractionDigits: 0 }).format(n);
+  return new Intl.NumberFormat(getActiveLocale(), { style: "currency", currency, maximumFractionDigits: 0 }).format(n);
 }
 
 export function Stat({ label, value, sub, accent }: { label: string; value: string; sub?: string; accent?: "brand" | "warm" }) {

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -27,6 +28,7 @@ const PRESETS = [
 ] as const;
 
 function Page() {
+  useCurrency();
   const [amount, setAmount] = useState(2500);
   const [preset, setPreset] = useState<string>("paypal");
   const [pct, setPct] = useState(4.4);

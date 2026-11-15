@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -21,6 +22,7 @@ function fmt(d: Date) {
 }
 
 function Page() {
+  useCurrency();
   const today = new Date().toISOString().slice(0, 10);
   const [invoiceDate, setInvoiceDate] = useState(today);
   const [terms, setTerms] = useState(30);

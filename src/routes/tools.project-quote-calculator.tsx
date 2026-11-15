@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -20,6 +21,7 @@ const COMPLEXITY: Record<string, { label: string; mult: number }> = {
 };
 
 function Page() {
+  useCurrency();
   const [hours, setHours] = useState(40);
   const [rate, setRate] = useState(85);
   const [complexity, setComplexity] = useState<keyof typeof COMPLEXITY>("moderate");

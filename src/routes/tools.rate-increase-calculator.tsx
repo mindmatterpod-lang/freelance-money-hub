@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -18,6 +19,7 @@ export const Route = createFileRoute("/tools/rate-increase-calculator")({
 });
 
 function Page() {
+  useCurrency();
   const [rate, setRate] = useState(80);
   const [increase, setIncrease] = useState(20);
   const [hours, setHours] = useState(100);

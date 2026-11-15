@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/tools/currency-adjusted-rate-calculator")
 const CURRENCIES = ["USD", "EUR", "GBP", "CAD", "AUD", "INR", "PKR", "NGN", "BRL", "ZAR", "PHP", "MXN", "JPY", "SGD"];
 
 function Page() {
+  useCurrency();
   const [amount, setAmount] = useState(100);
   const [from, setFrom] = useState("USD");
   const [to, setTo] = useState("EUR");

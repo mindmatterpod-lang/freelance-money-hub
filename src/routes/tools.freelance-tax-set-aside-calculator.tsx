@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useCurrency } from "@/lib/currency";
 import { ToolShell, Stat, Field, formatMoney } from "@/components/site/ToolShell";
 import { Input } from "@/components/ui/input";
 
@@ -25,6 +26,7 @@ export const Route = createFileRoute("/tools/freelance-tax-set-aside-calculator"
 });
 
 function Page() {
+  useCurrency();
   const [income, setIncome] = useState(60000);
   const [expenses, setExpenses] = useState(8000);
   const [pct, setPct] = useState(25);

@@ -1,3 +1,4 @@
+import { useCurrency, CURRENCIES } from "@/lib/currency";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Calculator } from "lucide-react";
@@ -23,6 +24,23 @@ const tools = [
   { to: "/tools/billable-utilization-rate-calculator", label: "Utilization" },
 ] as const;
 
+
+function CurrencySelect({ className = "" }: { className?: string }) {
+  const { currency, setCurrency } = useCurrency();
+  return (
+    <select
+      aria-label="Display currency"
+      title="Display currency (amounts are not converted)"
+      value={currency}
+      onChange={(e) => setCurrency(e.target.value)}
+      className={`rounded-md border bg-transparent px-2 py-1 text-xs font-medium ${className}`}
+    >
+      {CURRENCIES.map(([code, name]) => (
+        <option key={code} value={code}>{code} — {name}</option>
+      ))}
+    </select>
+  );
+}
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -70,6 +88,7 @@ export function Nav() {
           <Link to="/about" className="text-sm font-medium text-foreground/80 hover:text-foreground">
             About
           </Link>
+          <CurrencySelect />
           <Link
             to="/tools/freelance-hourly-rate-calculator"
             className="rounded-full bg-gradient-brand animate-gradient-pan px-4 py-2 text-sm font-semibold text-white shadow-soft hover:shadow-glow transition-shadow"
@@ -93,6 +112,8 @@ export function Nav() {
                 </Link>
               ))}
             </div>
+            <p className="mt-3 mb-2 text-xs font-semibold uppercase text-muted-foreground">Currency</p>
+            <CurrencySelect className="w-full py-2 text-sm" />
             <p className="mt-3 mb-2 text-xs font-semibold uppercase text-muted-foreground">More</p>
             <div className="grid gap-1">
               <Link to="/guides/how-to-set-your-freelance-rate" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 text-sm hover:bg-secondary">Guides</Link>
