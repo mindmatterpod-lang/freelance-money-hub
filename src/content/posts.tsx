@@ -993,4 +993,137 @@ export const POSTS: Record<string, PostContent> = {
     ],
     related: ["/tools/retainer-pricing-calculator", "/tools/freelance-hourly-rate-calculator", "/tools/scope-creep-cost-calculator"],
   },
+
+  "upwork-fees-2026-explained": {
+    ...base("upwork-fees-2026-explained"),
+    deck: "Upwork no longer takes a flat 10%. Since May 2025 every new contract has its own fee between 0% and 15% — here's what that means for what you actually keep.",
+    metaDescription: "Upwork fees in 2026 explained: the variable 0–15% service fee, Connects, withdrawal costs, what the client pays, and the formula for what to quote.",
+    sections: [
+      { h: "The short answer: it's 0–15% now, not a flat 10%", body: (
+        <>
+          <p>If you still think "Upwork takes 10%", you are working from old information — and probably undercharging.</p>
+          <p>Since May 2025, Upwork no longer charges one flat rate. Every new contract gets its own freelancer service fee, somewhere between 0% and 15%. You see the exact percentage on the offer before you accept, and it is locked in for the life of that contract. Contracts formed before May 2025 keep the old flat 10%.</p>
+          <p>That one change is why a simple percentage in your head is not enough anymore. You need to run the number for <em>that</em> contract, <em>that</em> amount, plus Connects and withdrawal fees. Our <Link to="/tools/upwork-fee-calculator">Upwork Fee Calculator</Link> does exactly that.</p>
+        </>
+      )},
+      { h: "The freelancer service fee: 0–15% per contract", body: (
+        <>
+          <p>This is the big one. It applies to everything you bill on that contract — hourly, fixed-price, bonuses, expenses.</p>
+          <ul>
+            <li>New contracts (from May 2025): 0–15%, set per contract, 10% is the most common figure</li>
+            <li>Older contracts (before May 2025): 10%</li>
+            <li>Direct Contracts (clients you bring to Upwork): 5%, or 0% with Freelancer Plus</li>
+          </ul>
+          <p>Example: a $1,000 contract at 10% costs you $100, so you keep $900 before other costs. At 15% you keep $850. At 0% you keep the full $1,000.</p>
+        </>
+      )},
+      { h: "Connects: $0.15 each", body: (
+        <>
+          <p>Every proposal costs Connects. The job listing tells you how many. At $0.15 each, a 10-Connect proposal costs $1.50 — small per job, but it adds up if you apply a lot.</p>
+          <p>Freelancer Plus ($19.99/month) includes 100 Connects a month. Before you spend them, check whether the job is worth it at your contract's fee rate — a small job at 15% plus Connects can be barely worth doing.</p>
+        </>
+      )},
+      { h: "Withdrawal fees: how you take money out matters", body: (
+        <>
+          <p>How you take money out depends on where your tax address is:</p>
+          <ul>
+            <li>Direct to US bank (ACH), US tax address: free</li>
+            <li>Direct to US bank (ACH), non-US tax address: $2.99 per transfer since 1 September 2026</li>
+            <li>Other methods (PayPal, Payoneer, wire) have their own per-transfer fees — check the fee on your withdrawal screen before you move money</li>
+          </ul>
+          <p>Tip: withdraw less often, in larger amounts, so you pay the per-transfer fee once instead of many times. Compare methods with the <Link to="/tools/payment-processing-fee-calculator">payment fee calculator</Link> before you commit to one.</p>
+        </>
+      )},
+      { h: "What the client pays (and why it affects your price)", body: (
+        <>
+          <p>Clients on the Basic plan pay a 5% marketplace fee on top of each payment, plus a one-time contract initiation fee of $0.99–$14.99 on a new contract.</p>
+          <p>That does not come out of your pay, but it does make you more expensive to the client. A $1,000 contract costs them about $1,050 plus the initiation fee. Keep that in mind when you quote — and when a client tells you your rate looks high.</p>
+        </>
+      )},
+      { h: "The formula: divide, don't add", body: (
+        <>
+          <p>To find what to quote so you keep what you want:</p>
+          <p><strong>Quote = target take-home ÷ (1 − service fee)</strong></p>
+          <p>Example: you want to keep $1,000 and your contract fee is 10%: $1,000 ÷ 0.90 = $1,111.11 to quote. At 15%: $1,000 ÷ 0.85 = $1,176.47.</p>
+          <p>Do not just add 10% on top — $1,000 + 10% = $1,100, and after the 10% fee you would keep $990, not $1,000. Then subtract Connects and withdrawal fees from the take-home side if you want the exact net in your bank.</p>
+          <p>Your real all-in cost is usually 12–16%, not 10%. Add Connects, membership if you pay for it, withdrawal fees and currency conversion, and most freelancers land at 12–16% all-in. That is the number your pricing should be built on: total fees ÷ total client payments, run once a month.</p>
+        </>
+      )},
+      { h: "Common mistakes and FAQ", body: (
+        <>
+          <ul>
+            <li>Assuming 10% for every contract — check the rate on <em>your</em> offer.</li>
+            <li>Forgetting Connects when you calculate profit on a small job.</li>
+            <li>Withdrawing small amounts often and paying the withdrawal fee many times.</li>
+            <li>Quoting $1,000 to "keep $1,000" — you won't, after the fee.</li>
+            <li>Ignoring the client's 5% fee when you wonder why a client thinks you are expensive.</li>
+          </ul>
+          <p><strong>How much does Upwork take in 2026?</strong> A variable service fee of 0–15% per contract, 10% most common, plus Connects ($0.15 each) and withdrawal fees.</p>
+          <p><strong>What should I charge to keep $50/hour?</strong> At a 10% fee, $50 ÷ 0.90 = $55.56/hour. At 15%, $58.82/hour.</p>
+          <p><em>Fees checked November 2026 against Upwork's official fee schedule. Upwork changes its schedule — always confirm the exact fee shown on your offer or contract page before you accept.</em></p>
+        </>
+      )},
+    ],
+    related: ["/tools/upwork-fee-calculator", "/tools/payment-processing-fee-calculator", "/tools/freelance-hourly-rate-calculator"],
+  },
+
+  "fiverr-fees-2026-explained": {
+    ...base("fiverr-fees-2026-explained"),
+    deck: "Fiverr keeps a flat 20% of every order — including tips and extras. Here's what you actually keep, what your buyer pays, and what to charge to hit your target.",
+    metaDescription: "Fiverr fees in 2026: the 20% seller commission, the buyer's 5.5% + $3.50 fee, withdrawal costs, clearing times, and what to charge to keep your target.",
+    sections: [
+      { h: "The seller fee: 20% of everything", body: (
+        <>
+          <p>Fiverr's fee is simple, which is exactly why it is easy to underprice against. Sellers pay a flat 20% commission on every order — and the same rate applies to gig extras and tips. There are no tiers, no volume discounts, and no exemption for tips.</p>
+          <p>On a $100 gig you keep $80. On a $25 gig you keep $20, before withdrawal fees. And unlike Upwork, the fee does not drop as you level up — it stays at 20% for every seller level, from new seller to Top Rated.</p>
+          <p>Run your exact numbers with the <Link to="/tools/fiverr-fee-calculator">Fiverr Fee Calculator</Link>.</p>
+        </>
+      )},
+      { h: "What the buyer pays: 5.5% plus $3.50 under $200", body: (
+        <>
+          <p>Buyers pay a separate service fee on top of your price, so it never reduces your earnings — but it decides what your gig really costs them. Every purchase pays 5.5%, and anything under $200 adds a flat $3.50 small-order fee.</p>
+          <p>The $100 example: your gig costs the buyer $109 — $100 plus $5.50 (5.5%) plus $3.50. You keep $80, the buyer pays $109, and Fiverr's total cut across both sides is $29.</p>
+          <p>On small orders the flat fee bites hardest. On a $25 order, the buyer pays $29.88 and you keep $20 — so Fiverr's combined cut is about 32% of what the client paid. That is worth knowing before you price a cheap gig.</p>
+        </>
+      )},
+      { h: "Withdrawal fees and clearing times", body: (
+        <>
+          <p>Earnings clear 14 days after an order is marked complete, or 7 days for Top Rated Sellers, sellers on Seller Plus and Fiverr Pro. Plan your cash flow around that wait — it is not same-day money.</p>
+          <p>Withdrawal fees depend on the method:</p>
+          <ul>
+            <li>PayPal: free on Fiverr's side</li>
+            <li>Local bank transfer via Payoneer: $3 per transfer</li>
+            <li>US direct deposit: $1 per transfer</li>
+            <li>Fiverr Revenue Card: $1 within 2 days, or $3 within 2 hours</li>
+          </ul>
+          <p>PayPal or Payoneer may add their own currency conversion charges on top. As with Upwork, withdrawing larger amounts less often means paying the per-transfer fee fewer times. If you are paid through several platforms, compare the full cost with the <Link to="/tools/payment-processing-fee-calculator">payment fee calculator</Link>.</p>
+        </>
+      )},
+      { h: "What to charge to keep your target", body: (
+        <>
+          <p>Price from the take-home you want, not from the number that looks good on the gig page:</p>
+          <p><strong>Price to charge = target take-home ÷ 0.8</strong></p>
+          <p>To keep $100, price the gig at $125 — Fiverr's 20% takes $25 and leaves you with $100 before withdrawal fees. To keep $500, charge $625.</p>
+          <p>If you want the withdrawal fee covered too, use (target + withdrawal fee) ÷ 0.8. With a $3 Payoneer withdrawal, keeping $100 means charging $128.75.</p>
+          <p>Then sanity-check the result against your hourly rate. A $125 gig that takes you five hours is $20/hour after the fee — run it through the <Link to="/tools/freelance-hourly-rate-calculator">hourly rate calculator</Link> before you list it.</p>
+        </>
+      )},
+      { h: "Common mistakes and FAQ", body: (
+        <>
+          <ul>
+            <li>Pricing a gig at the amount you want to keep — a $100 price pays you $80, not $100.</li>
+            <li>Forgetting the 20% applies to tips and extras, not just the base gig price.</li>
+            <li>Ignoring withdrawal fees on small orders, where a $3 fee is a large share of what you keep.</li>
+            <li>Assuming the fee drops as you level up — it stays at 20% for every seller level.</li>
+            <li>Forgetting the 7–14 day clearing period when planning cash flow.</li>
+          </ul>
+          <p><strong>How much does Fiverr take from sellers?</strong> A flat 20% of every order, including extras and tips. A $100 gig pays you $80.</p>
+          <p><strong>What does the buyer pay?</strong> Your price plus a 5.5% service fee, plus $3.50 on purchases under $200. A $100 gig costs the buyer $109.</p>
+          <p><strong>How long until Fiverr earnings clear?</strong> 14 days after completion, or 7 days for Top Rated Sellers and Seller Plus / Pro members.</p>
+          <p><em>Fees checked November 2026 against Fiverr's official fee schedule. Fiverr changes its schedule — confirm the current fees on Fiverr's own pricing pages before you quote.</em></p>
+        </>
+      )},
+    ],
+    related: ["/tools/fiverr-fee-calculator", "/tools/upwork-fee-calculator", "/tools/payment-processing-fee-calculator"],
+  },
 };

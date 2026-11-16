@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
       { title: "FreelanceRate — Free money tools for freelancers worldwide" },
       { name: "description", content: "A free toolkit of calculators to price freelance work, estimate taxes, convert currencies, and manage cash flow. No signup, works worldwide." },
       { property: "og:title", content: "FreelanceRate — Free money tools for freelancers" },
-      { property: "og:description", content: "Price your work, estimate taxes, and manage cash flow with 18 free calculators built for freelancers." },
+      { property: "og:description", content: "Price your work, estimate taxes, and manage cash flow with 21 free calculators built for freelancers." },
     ],
   }),
   component: Home,
@@ -34,6 +34,9 @@ const tools = [
   { to: "/tools/freelance-emergency-fund-calculator", title: "Emergency Fund", blurb: "How much runway you need before slow months hurt.", icon: Wallet },
   { to: "/tools/client-discount-calculator", title: "Discount Impact", blurb: "What a 'small' discount really costs in free hours.", icon: Receipt },
   { to: "/tools/billable-utilization-rate-calculator", title: "Billable Utilization", blurb: "What share of your week actually earns money.", icon: Clock },
+  { to: "/tools/upwork-fee-calculator", title: "Upwork Fee Calculator", blurb: "What you keep after Upwork's 0–15% fee, Connects and withdrawals.", icon: Calculator },
+  { to: "/tools/fiverr-fee-calculator", title: "Fiverr Fee Calculator", blurb: "Your earnings after Fiverr's 20% cut — and what your buyer pays.", icon: Receipt },
+  { to: "/tools/freelance-invoice-generator", title: "Invoice Generator", blurb: "Build a clean invoice and print or save it as PDF. No signup.", icon: Receipt },
 ] as const;
 
 
@@ -53,7 +56,7 @@ function Home() {
         <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-24 text-center md:pt-32 md:pb-32 md:px-6">
           <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium animate-fade-up">
             <Sparkles className="h-3.5 w-3.5 text-brand" />
-            18 free tools · no signup · works worldwide
+            21 free tools · no signup · works worldwide
           </span>
           <h1 className="mt-6 font-display text-5xl font-bold tracking-tight md:text-7xl animate-fade-up" style={{ animationDelay: "60ms" }}>
             Freelance money,
@@ -72,7 +75,7 @@ function Home() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <a href="#tools" className="rounded-full glass px-6 py-3 text-sm font-semibold">
-              Browse all 18 tools
+              Browse all 21 tools
             </a>
           </div>
 
@@ -106,7 +109,7 @@ function Home() {
         <div className="mb-10 flex items-end justify-between">
           <div>
             <p className="text-sm font-semibold text-brand">The toolkit</p>
-            <h2 className="mt-1 font-display text-4xl font-bold tracking-tight md:text-5xl">Eight calculators. One goal.</h2>
+            <h2 className="mt-1 font-display text-4xl font-bold tracking-tight md:text-5xl">Twenty-one calculators. One goal.</h2>
             <p className="mt-2 max-w-xl text-muted-foreground">Each tool answers one very specific question freelancers actually ask.</p>
           </div>
         </div>

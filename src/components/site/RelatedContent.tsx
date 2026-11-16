@@ -22,6 +22,9 @@ export const ALL_TOOLS = [
   { to: "/tools/freelance-emergency-fund-calculator", title: "Emergency Fund Calculator", blurb: "How much runway you need before slow months hurt." },
   { to: "/tools/client-discount-calculator", title: "Discount Impact Calculator", blurb: "How many extra hours a 'small' discount really costs." },
   { to: "/tools/billable-utilization-rate-calculator", title: "Billable Utilization Calculator", blurb: "What share of your week is actually earning money." },
+  { to: "/tools/upwork-fee-calculator", title: "Upwork Fee Calculator", blurb: "What you keep after Upwork's 0–15% service fee, Connects and withdrawals." },
+  { to: "/tools/fiverr-fee-calculator", title: "Fiverr Fee Calculator", blurb: "Your earnings after Fiverr's 20% cut, and what your buyer pays." },
+  { to: "/tools/freelance-invoice-generator", title: "Freelance Invoice Generator", blurb: "Build a clean, numbered invoice and print or save it as PDF — no signup." },
 ] as const;
 
 export type ToolKey = (typeof ALL_TOOLS)[number]["to"];
@@ -73,6 +76,8 @@ export const ALL_POSTS: BlogPostMeta[] = [
   { slug: "best-payment-methods-for-international-freelancers", title: "Best Payment Methods for International Freelancers", excerpt: "Wise, Payoneer, PayPal, Stripe and bank wires compared on real cost, speed and coverage.", readMins: 8, category: "Payments" },
   { slug: "freelance-emergency-fund-how-much", title: "How Big Should a Freelancer's Emergency Fund Be?", excerpt: "Runway maths for irregular income, and where to keep the money so you actually leave it alone.", readMins: 6, category: "Money" },
   { slug: "freelance-retainers-explained", title: "Freelance Retainers Explained: Pricing, Scope and Contracts", excerpt: "How to structure a retainer so it's predictable income for you and obvious value for the client.", readMins: 8, category: "Pricing" },
+  { slug: "upwork-fees-2026-explained", title: "Upwork Fees in 2026 Explained: What Freelancers Actually Keep", excerpt: "The 0–15% variable service fee, Connects, withdrawal costs, and the formula for what to quote.", readMins: 8, category: "Pricing" },
+  { slug: "fiverr-fees-2026-explained", title: "Fiverr Fees in 2026: The 20% Cut, Buyer Fees, and What to Charge", excerpt: "Fiverr keeps 20% of every order, including tips. See what you keep, what the buyer pays, and what to charge.", readMins: 7, category: "Pricing" },
 ];
 
 export type BlogKey = `/blog/${(typeof ALL_POSTS)[number]["slug"]}`;
