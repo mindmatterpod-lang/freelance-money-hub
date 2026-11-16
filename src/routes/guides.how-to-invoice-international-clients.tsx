@@ -8,12 +8,12 @@ export const Route = createFileRoute(
     meta: [
       {
         title:
-          "How to Invoice International Clients: Step-by-Step Guide | FreelanceRate",
+          "How to Invoice Clients in Other Countries | FreelanceRate",
       },
       {
         name: "description",
         content:
-          "Learn how to invoice international clients, choose the right currency, handle payment fees, set payment terms, track payments, and reduce cross-border payment problems.",
+          "How do freelancers create invoices for clients in other countries? Invoice in a clear currency, state payment terms, and get paid via Wise, Payoneer or PayPal.",
       },
       {
         name: "robots",
@@ -38,6 +38,21 @@ export const Route = createFileRoute(
                 the services provided, states the amount and currency, gives a
                 specific due date, and explains exactly how the client should
                 pay.
+              </p>
+
+              <p>
+                In short: invoice in a clear, agreed currency using a{" "}
+                <Link to="/tools/freelance-invoice-generator">
+                  no-signup invoice generator
+                </Link>
+                , state your payment terms and due date on the invoice, and
+                agree the payment method up front — Wise, Payoneer and PayPal
+                are the usual choices for freelancers. Check what each method
+                actually costs you with our{" "}
+                <Link to="/tools/payment-processing-fee-calculator">
+                  payment fee calculator
+                </Link>{" "}
+                before you choose.
               </p>
 
               <p>
@@ -1114,6 +1129,10 @@ export const Route = createFileRoute(
 
               <p>
                 Use our{" "}
+                <Link to="/tools/freelance-invoice-generator">
+                  Freelance Invoice Generator
+                </Link>
+                ,{" "}
                 <Link to="/tools/currency-adjusted-rate-calculator">
                   Currency-Adjusted Rate Calculator
                 </Link>

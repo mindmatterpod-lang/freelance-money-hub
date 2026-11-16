@@ -1126,4 +1126,103 @@ export const POSTS: Record<string, PostContent> = {
     ],
     related: ["/tools/fiverr-fee-calculator", "/tools/upwork-fee-calculator", "/tools/payment-processing-fee-calculator"],
   },
+
+  "freelance-taxes-in-pakistan": {
+    ...base("freelance-taxes-in-pakistan"),
+    deck: "Pakistani freelancers pay tax — but if your clients are abroad, the rate can be as low as 0.25% of what you earn. Here's how the filer system, the export tax, and filing actually work.",
+    metaDescription: "Freelance taxes in Pakistan: filer vs non-filer, the 0.25% / 1% final tax on IT export income, PSEB registration, and how to file on FBR's IRIS portal.",
+    sections: [
+      { h: "The short answer", body: (
+        <>
+          <p>Yes, freelancers in Pakistan pay tax. But <em>how much</em> depends mostly on one thing: where your clients are.</p>
+          <p>If your clients are abroad and you are paid through proper banking channels, income from IT and IT-enabled services is taxed under a special final-tax regime (Section 154A of the Income Tax Ordinance 2001): <strong>0.25% of gross receipts if you are registered with the Pakistan Software Export Board (PSEB), or 1% if you are not</strong>. That is the whole tax on that income — no progressive slabs on top.</p>
+          <p>If your clients are in Pakistan, the normal progressive income-tax slabs apply instead. The details — and the paperwork that decides which rate you get — are below.</p>
+          <p><em>This article is general information, not tax advice. Tax rates in Pakistan are set by the Finance Act and can change each budget — confirm the current rates with FBR or a qualified tax professional before filing.</em></p>
+        </>
+      )},
+      { h: "Who has to pay tax on freelance income?", body: (
+        <>
+          <p>Under the Income Tax Ordinance 2001, any income earned by a resident of Pakistan — local or foreign — is taxable. Freelancing does not exempt you.</p>
+          <p>The practical threshold: if your annual income is above <strong>PKR 600,000</strong>, you must file a tax return. Below that threshold no income tax is due, but filing is still worthwhile — it puts you on the Active Taxpayer List (ATL), which is what makes you a "filer" (see below).</p>
+          <p>Being self-employed is itself the trigger. The FBR treats you as a self-employed taxpayer if you provide services independently, without a salaried employment contract — whether your clients found you on Upwork, Fiverr, or by word of mouth.</p>
+        </>
+      )},
+      { h: "Filer vs non-filer: why it matters", body: (
+        <>
+          <p>Pakistan's tax system runs on two lists. A <strong>filer</strong> is someone on FBR's Active Taxpayer List (ATL) — you get there by registering for an NTN and filing your annual return. A <strong>non-filer</strong> is anyone not on the list.</p>
+          <p>Non-filers pay higher withholding tax on almost every transaction — bank transactions, property, vehicles, dividends — sometimes double the filer rate. The export tax on your freelance income is deducted by your bank either way, but staying a non-filer costs you on everything else.</p>
+          <p>That is why the filing itself matters as much as the rate: the return is what keeps you on the ATL, and the ATL is what keeps your other tax rates low.</p>
+        </>
+      )},
+      { h: "Export income: the 0.25% / 1% final tax", body: (
+        <>
+          <p>Income from exporting IT and IT-enabled services (ITeS) — software, design, development, digital marketing, and similar work for foreign clients — is taxed under Section 154A as a <strong>final tax</strong> on gross receipts:</p>
+          <ul>
+            <li><strong>0.25%</strong> if you are registered with PSEB</li>
+            <li><strong>1%</strong> if you are not PSEB-registered</li>
+          </ul>
+          <p>Your bank deducts it automatically when the foreign remittance arrives in your Pakistani account. Because it is a final tax, that deduction is your full tax on that income — no progressive slabs, no additional liability on the same earnings.</p>
+          <p>Two conditions decide whether you qualify. First, the income must genuinely be from exporting IT/ITeS services to clients outside Pakistan. Second, at least <strong>80% of your export earnings must be received in Pakistan through approved banking channels</strong> (bank transfer, Payoneer or Wise into a Pakistani account) during the tax year. Cash or informal transfers do not qualify.</p>
+          <p>These rates are the ones widely reported for tax years 2025-26 and 2026-27. They are set by the Finance Act and can change — confirm the current rate on FBR's withholding tax card or with PSEB before relying on it.</p>
+        </>
+      )},
+      { h: "Local clients: the normal slabs", body: (
+        <>
+          <p>Income from clients inside Pakistan does not get the export treatment. It is taxed under the normal progressive income-tax slabs, which run from 0% to 35% depending on your taxable income, with the first PKR 600,000 tax-free.</p>
+          <p>Local clients may also deduct withholding tax from your payment before sending it to you, depending on whether they are registered with the tax authorities and whether you are a filer — the deducted amount is deposited with FBR on your behalf and counts toward your liability.</p>
+          <p>If you have a mix of foreign and local clients, the two regimes apply side by side: export income under the final tax, local income under the slabs. Run your own numbers with our <Link to="/tools/self-employment-tax-estimator">Self-Employment Tax Estimator</Link>, which models Pakistan's slabs.</p>
+        </>
+      )},
+      { h: "How much should you set aside?", body: (
+        <>
+          <p>It depends on which kind of income it is — and the two kinds behave very differently.</p>
+          <p><strong>Export income:</strong> the bank has already deducted the final tax (0.25% or 1%) when the money arrived, so there is little left to set aside for that income. Keep a small buffer for anything not covered, and make sure the deduction actually happened at the rate you expect.</p>
+          <p><strong>Local income:</strong> nothing is deducted automatically in the same way, so set money aside yourself. A common starting point is 20–30% of profit until you know your actual slab, then adjust. Our <Link to="/tools/freelance-tax-set-aside-calculator">Tax Set-Aside Calculator</Link> turns that into a per-invoice percentage.</p>
+          <p>The mistake to avoid is treating all your income the same: setting aside 25% of export income wastes cash you could use, while setting aside 1% of local income leaves you short at filing time.</p>
+        </>
+      )},
+      { h: "How to file: NTN, IRIS, and the annual return", body: (
+        <>
+          <p>Filing as a freelancer has three steps:</p>
+          <ol className="list-decimal space-y-2 pl-6">
+            <li><strong>Get an NTN.</strong> Register on FBR's IRIS portal (iris.fbr.gov.pk) using your CNIC — for individuals, the NTN is usually linked directly to your CNIC. You will also need a mobile number registered against your CNIC, an email address, and your bank details.</li>
+            <li><strong>Complete your taxpayer profile.</strong> Set your business type to freelancing, IT services, or software export as applicable, so the export treatment is recorded correctly.</li>
+            <li><strong>File your annual return.</strong> Declare your total income including foreign earnings, claim allowable business expenses, and submit — usually by <strong>30 September</strong> after the tax year ends (1 July – 30 June), unless FBR extends the date. A wealth statement is part of the filing.</li>
+          </ol>
+          <p>File every year, even in a slow year. Skipping a year drops you off the Active Taxpayer List, and getting back on it costs more than the filing ever did.</p>
+        </>
+      )},
+      { h: "PSEB registration: the step that pays for itself", body: (
+        <>
+          <p>Registering with the Pakistan Software Export Board is optional — but it is the single highest-return administrative step for an IT freelancer. It cuts the export tax from 1% to 0.25%.</p>
+          <p>On Rs 4,000,000 of annual export income, that is the difference between Rs 40,000 and Rs 10,000 of tax — about Rs 30,000 saved every year.</p>
+          <p>To register, apply through the PSEB portal (pseb.org.pk) with your NTN, a copy of your CNIC, and proof of the export services you provide (an Upwork or Fiverr profile, a client contract, or a foreign invoice). After registering, check that your bank actually deducts 0.25% rather than 1% on incoming remittances — if it does not, the registration is not yet reflected in your bank's records.</p>
+        </>
+      )},
+      { h: "Record-keeping checklist", body: (
+        <>
+          <p>Good records are what make the low export rate defensible if FBR ever asks. Keep these together:</p>
+          <ul>
+            <li>Every invoice you issue — numbered, dated, with the client and currency stated</li>
+            <li>Proceeds Realization Certificates (PRCs) from your bank for each foreign remittance</li>
+            <li>Payment confirmations from Upwork, Fiverr, Payoneer, Wise, or your bank</li>
+            <li>Client agreements or contracts</li>
+            <li>Receipts for business expenses (software, hardware, internet, courses)</li>
+            <li>Bank statements showing the remittances arriving in Pakistan</li>
+          </ul>
+          <p>Generate clean invoices with our <Link to="/tools/freelance-invoice-generator">Freelance Invoice Generator</Link> — it is free, needs no signup, and keeps your data in your browser. For the bigger picture on how freelance tax works across countries, see our <Link to="/guides/freelance-tax-basics-by-country">freelance tax basics guide</Link>.</p>
+        </>
+      )},
+      { h: "FAQ", body: (
+        <>
+          <p><strong>Do I need to file if I earn under Rs 600,000?</strong> No income tax is due below the threshold, but filing is still worthwhile — it keeps you on the Active Taxpayer List, which keeps your withholding rates low on everything else.</p>
+          <p><strong>Does the 1% rate apply to non-IT freelancers?</strong> The Section 154A concession is specifically for IT and IT-enabled services exports. Other freelance services generally fall under the normal tax regime — check the current FBR rules for your type of work.</p>
+          <p><strong>What if I am paid in cash or crypto?</strong> Only income received through approved banking channels qualifies for the export rate. Cash or informal transfers do not count toward the 80% requirement and will not survive an FBR audit.</p>
+          <p><strong>Can I get the 0.25% rate without PSEB registration?</strong> No — 0.25% is the PSEB-registered rate. Without registration, the export rate is 1% (for filers).</p>
+          <p><em>This article is general information, not tax advice. Rates and exemptions are set by the Finance Act and can change each budget — confirm the current rules with FBR or a qualified tax professional before filing.</em></p>
+        </>
+      )},
+    ],
+    related: ["/tools/self-employment-tax-estimator", "/tools/freelance-tax-set-aside-calculator", "/tools/freelance-invoice-generator"],
+  },
 };

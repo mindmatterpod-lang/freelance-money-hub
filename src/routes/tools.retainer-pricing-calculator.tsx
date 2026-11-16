@@ -64,12 +64,12 @@ export const Route = createFileRoute("/tools/retainer-pricing-calculator")({
     };
 
     return {
-      title: "Monthly Retainer Pricing Calculator — Free Freelance Retainer Fee Model",
+      title: "Freelance Retainer Pricing Calculator (Free) | FreelanceRate",
       meta: [
         {
           name: "description",
           content:
-            "Calculate monthly retainer fees, compare retainer Vs hourly rates, set overage pricing, and model annual contract values for freelance services.",
+            "Price a monthly freelance retainer: fee, effective hourly rate, overage pricing and annual contract value — in seconds, free.",
         },
         {
           name: "keywords",

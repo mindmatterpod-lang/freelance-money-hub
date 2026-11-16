@@ -25,6 +25,9 @@ export const ALL_TOOLS = [
   { to: "/tools/upwork-fee-calculator", title: "Upwork Fee Calculator", blurb: "What you keep after Upwork's 0–15% service fee, Connects and withdrawals." },
   { to: "/tools/fiverr-fee-calculator", title: "Fiverr Fee Calculator", blurb: "Your earnings after Fiverr's 20% cut, and what your buyer pays." },
   { to: "/tools/freelance-invoice-generator", title: "Freelance Invoice Generator", blurb: "Build a clean, numbered invoice and print or save it as PDF — no signup." },
+  { to: "/tools/freelance-currency-converter", title: "Freelance Currency Converter", blurb: "What a freelance payment is really worth after FX and fees." },
+  { to: "/tools/billable-hours-calculator", title: "Billable Hours Calculator", blurb: "How many hours you can actually bill — and what the rest are worth." },
+  { to: "/tools/paypal-fee-calculator", title: "PayPal Fee Calculator", blurb: "What PayPal takes, and what to charge to keep your target." },
 ] as const;
 
 export type ToolKey = (typeof ALL_TOOLS)[number]["to"];
@@ -78,6 +81,7 @@ export const ALL_POSTS: BlogPostMeta[] = [
   { slug: "freelance-retainers-explained", title: "Freelance Retainers Explained: Pricing, Scope and Contracts", excerpt: "How to structure a retainer so it's predictable income for you and obvious value for the client.", readMins: 8, category: "Pricing" },
   { slug: "upwork-fees-2026-explained", title: "Upwork Fees in 2026 Explained: What Freelancers Actually Keep", excerpt: "The 0–15% variable service fee, Connects, withdrawal costs, and the formula for what to quote.", readMins: 8, category: "Pricing" },
   { slug: "fiverr-fees-2026-explained", title: "Fiverr Fees in 2026: The 20% Cut, Buyer Fees, and What to Charge", excerpt: "Fiverr keeps 20% of every order, including tips. See what you keep, what the buyer pays, and what to charge.", readMins: 7, category: "Pricing" },
+  { slug: "freelance-taxes-in-pakistan", title: "Freelance Taxes in Pakistan: What Freelancers Actually Pay (2026)", excerpt: "Filer vs non-filer, the 0.25% / 1% final tax on IT export income, PSEB registration, and how to file on FBR's IRIS portal.", readMins: 8, category: "Tax" },
 ];
 
 export type BlogKey = `/blog/${(typeof ALL_POSTS)[number]["slug"]}`;

@@ -7,8 +7,8 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/tools/self-employment-tax-estimator")({
   head: () => ({
     meta: [
-      { title: "Self-Employment Tax Estimator — Free | FreelanceRate" },
-      { name: "description", content: "Estimate self-employment tax across the US, UK, Canada, Australia, India and Pakistan. Not tax advice — a working ballpark." },
+      { title: "Estimate Your Freelance Taxes (Free) | FreelanceRate" },
+      { name: "description", content: "Estimate freelance taxes: income tax + self-employment contributions for the US, UK, Canada, Australia, India and Pakistan, with what to set aside." },
     ],
   }),
   component: Page,

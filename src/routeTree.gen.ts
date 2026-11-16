@@ -23,11 +23,13 @@ import { Route as GuidesHowToInvoiceInternationalClientsRouteImport } from './ro
 import { Route as GuidesHowToPriceAFixedBidProjectRouteImport } from './routes/guides.how-to-price-a-fixed-bid-project'
 import { Route as GuidesHowToSetYourFreelanceRateRouteImport } from './routes/guides.how-to-set-your-freelance-rate'
 import { Route as ToolsAnnualIncomeToHourlyRateCalculatorRouteImport } from './routes/tools.annual-income-to-hourly-rate-calculator'
+import { Route as ToolsBillableHoursCalculatorRouteImport } from './routes/tools.billable-hours-calculator'
 import { Route as ToolsBillableUtilizationRateCalculatorRouteImport } from './routes/tools.billable-utilization-rate-calculator'
 import { Route as ToolsClientDiscountCalculatorRouteImport } from './routes/tools.client-discount-calculator'
 import { Route as ToolsCurrencyAdjustedRateCalculatorRouteImport } from './routes/tools.currency-adjusted-rate-calculator'
 import { Route as ToolsDaysToInvoicePaymentCalculatorRouteImport } from './routes/tools.days-to-invoice-payment-calculator'
 import { Route as ToolsFiverrFeeCalculatorRouteImport } from './routes/tools.fiverr-fee-calculator'
+import { Route as ToolsFreelanceCurrencyConverterRouteImport } from './routes/tools.freelance-currency-converter'
 import { Route as ToolsFreelanceDayRateCalculatorRouteImport } from './routes/tools.freelance-day-rate-calculator'
 import { Route as ToolsFreelanceEmergencyFundCalculatorRouteImport } from './routes/tools.freelance-emergency-fund-calculator'
 import { Route as ToolsFreelanceHourlyRateCalculatorRouteImport } from './routes/tools.freelance-hourly-rate-calculator'
@@ -36,6 +38,7 @@ import { Route as ToolsFreelanceProfitMarginCalculatorRouteImport } from './rout
 import { Route as ToolsFreelanceTaxSetAsideCalculatorRouteImport } from './routes/tools.freelance-tax-set-aside-calculator'
 import { Route as ToolsInvoiceLateFeeCalculatorRouteImport } from './routes/tools.invoice-late-fee-calculator'
 import { Route as ToolsPaymentProcessingFeeCalculatorRouteImport } from './routes/tools.payment-processing-fee-calculator'
+import { Route as ToolsPaypalFeeCalculatorRouteImport } from './routes/tools.paypal-fee-calculator'
 import { Route as ToolsProjectQuoteCalculatorRouteImport } from './routes/tools.project-quote-calculator'
 import { Route as ToolsRateIncreaseCalculatorRouteImport } from './routes/tools.rate-increase-calculator'
 import { Route as ToolsRetainerPricingCalculatorRouteImport } from './routes/tools.retainer-pricing-calculator'
@@ -119,6 +122,12 @@ const ToolsAnnualIncomeToHourlyRateCalculatorRoute =
     path: '/tools/annual-income-to-hourly-rate-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ToolsBillableHoursCalculatorRoute =
+  ToolsBillableHoursCalculatorRouteImport.update({
+    id: '/tools/billable-hours-calculator',
+    path: '/tools/billable-hours-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ToolsBillableUtilizationRateCalculatorRoute =
   ToolsBillableUtilizationRateCalculatorRouteImport.update({
     id: '/tools/billable-utilization-rate-calculator',
@@ -147,6 +156,12 @@ const ToolsFiverrFeeCalculatorRoute =
   ToolsFiverrFeeCalculatorRouteImport.update({
     id: '/tools/fiverr-fee-calculator',
     path: '/tools/fiverr-fee-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsFreelanceCurrencyConverterRoute =
+  ToolsFreelanceCurrencyConverterRouteImport.update({
+    id: '/tools/freelance-currency-converter',
+    path: '/tools/freelance-currency-converter',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ToolsFreelanceDayRateCalculatorRoute =
@@ -195,6 +210,12 @@ const ToolsPaymentProcessingFeeCalculatorRoute =
   ToolsPaymentProcessingFeeCalculatorRouteImport.update({
     id: '/tools/payment-processing-fee-calculator',
     path: '/tools/payment-processing-fee-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsPaypalFeeCalculatorRoute =
+  ToolsPaypalFeeCalculatorRouteImport.update({
+    id: '/tools/paypal-fee-calculator',
+    path: '/tools/paypal-fee-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ToolsProjectQuoteCalculatorRoute =
@@ -254,11 +275,13 @@ export interface FileRoutesByFullPath {
   '/guides/how-to-price-a-fixed-bid-project': typeof GuidesHowToPriceAFixedBidProjectRoute
   '/guides/how-to-set-your-freelance-rate': typeof GuidesHowToSetYourFreelanceRateRoute
   '/tools/annual-income-to-hourly-rate-calculator': typeof ToolsAnnualIncomeToHourlyRateCalculatorRoute
+  '/tools/billable-hours-calculator': typeof ToolsBillableHoursCalculatorRoute
   '/tools/billable-utilization-rate-calculator': typeof ToolsBillableUtilizationRateCalculatorRoute
   '/tools/client-discount-calculator': typeof ToolsClientDiscountCalculatorRoute
   '/tools/currency-adjusted-rate-calculator': typeof ToolsCurrencyAdjustedRateCalculatorRoute
   '/tools/days-to-invoice-payment-calculator': typeof ToolsDaysToInvoicePaymentCalculatorRoute
   '/tools/fiverr-fee-calculator': typeof ToolsFiverrFeeCalculatorRoute
+  '/tools/freelance-currency-converter': typeof ToolsFreelanceCurrencyConverterRoute
   '/tools/freelance-day-rate-calculator': typeof ToolsFreelanceDayRateCalculatorRoute
   '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
@@ -267,6 +290,7 @@ export interface FileRoutesByFullPath {
   '/tools/freelance-tax-set-aside-calculator': typeof ToolsFreelanceTaxSetAsideCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
   '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
+  '/tools/paypal-fee-calculator': typeof ToolsPaypalFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
   '/tools/rate-increase-calculator': typeof ToolsRateIncreaseCalculatorRoute
   '/tools/retainer-pricing-calculator': typeof ToolsRetainerPricingCalculatorRoute
@@ -290,11 +314,13 @@ export interface FileRoutesByTo {
   '/guides/how-to-price-a-fixed-bid-project': typeof GuidesHowToPriceAFixedBidProjectRoute
   '/guides/how-to-set-your-freelance-rate': typeof GuidesHowToSetYourFreelanceRateRoute
   '/tools/annual-income-to-hourly-rate-calculator': typeof ToolsAnnualIncomeToHourlyRateCalculatorRoute
+  '/tools/billable-hours-calculator': typeof ToolsBillableHoursCalculatorRoute
   '/tools/billable-utilization-rate-calculator': typeof ToolsBillableUtilizationRateCalculatorRoute
   '/tools/client-discount-calculator': typeof ToolsClientDiscountCalculatorRoute
   '/tools/currency-adjusted-rate-calculator': typeof ToolsCurrencyAdjustedRateCalculatorRoute
   '/tools/days-to-invoice-payment-calculator': typeof ToolsDaysToInvoicePaymentCalculatorRoute
   '/tools/fiverr-fee-calculator': typeof ToolsFiverrFeeCalculatorRoute
+  '/tools/freelance-currency-converter': typeof ToolsFreelanceCurrencyConverterRoute
   '/tools/freelance-day-rate-calculator': typeof ToolsFreelanceDayRateCalculatorRoute
   '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
@@ -303,6 +329,7 @@ export interface FileRoutesByTo {
   '/tools/freelance-tax-set-aside-calculator': typeof ToolsFreelanceTaxSetAsideCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
   '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
+  '/tools/paypal-fee-calculator': typeof ToolsPaypalFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
   '/tools/rate-increase-calculator': typeof ToolsRateIncreaseCalculatorRoute
   '/tools/retainer-pricing-calculator': typeof ToolsRetainerPricingCalculatorRoute
@@ -327,11 +354,13 @@ export interface FileRoutesById {
   '/guides/how-to-price-a-fixed-bid-project': typeof GuidesHowToPriceAFixedBidProjectRoute
   '/guides/how-to-set-your-freelance-rate': typeof GuidesHowToSetYourFreelanceRateRoute
   '/tools/annual-income-to-hourly-rate-calculator': typeof ToolsAnnualIncomeToHourlyRateCalculatorRoute
+  '/tools/billable-hours-calculator': typeof ToolsBillableHoursCalculatorRoute
   '/tools/billable-utilization-rate-calculator': typeof ToolsBillableUtilizationRateCalculatorRoute
   '/tools/client-discount-calculator': typeof ToolsClientDiscountCalculatorRoute
   '/tools/currency-adjusted-rate-calculator': typeof ToolsCurrencyAdjustedRateCalculatorRoute
   '/tools/days-to-invoice-payment-calculator': typeof ToolsDaysToInvoicePaymentCalculatorRoute
   '/tools/fiverr-fee-calculator': typeof ToolsFiverrFeeCalculatorRoute
+  '/tools/freelance-currency-converter': typeof ToolsFreelanceCurrencyConverterRoute
   '/tools/freelance-day-rate-calculator': typeof ToolsFreelanceDayRateCalculatorRoute
   '/tools/freelance-emergency-fund-calculator': typeof ToolsFreelanceEmergencyFundCalculatorRoute
   '/tools/freelance-hourly-rate-calculator': typeof ToolsFreelanceHourlyRateCalculatorRoute
@@ -340,6 +369,7 @@ export interface FileRoutesById {
   '/tools/freelance-tax-set-aside-calculator': typeof ToolsFreelanceTaxSetAsideCalculatorRoute
   '/tools/invoice-late-fee-calculator': typeof ToolsInvoiceLateFeeCalculatorRoute
   '/tools/payment-processing-fee-calculator': typeof ToolsPaymentProcessingFeeCalculatorRoute
+  '/tools/paypal-fee-calculator': typeof ToolsPaypalFeeCalculatorRoute
   '/tools/project-quote-calculator': typeof ToolsProjectQuoteCalculatorRoute
   '/tools/rate-increase-calculator': typeof ToolsRateIncreaseCalculatorRoute
   '/tools/retainer-pricing-calculator': typeof ToolsRetainerPricingCalculatorRoute
@@ -365,11 +395,13 @@ export interface FileRouteTypes {
     | '/guides/how-to-price-a-fixed-bid-project'
     | '/guides/how-to-set-your-freelance-rate'
     | '/tools/annual-income-to-hourly-rate-calculator'
+    | '/tools/billable-hours-calculator'
     | '/tools/billable-utilization-rate-calculator'
     | '/tools/client-discount-calculator'
     | '/tools/currency-adjusted-rate-calculator'
     | '/tools/days-to-invoice-payment-calculator'
     | '/tools/fiverr-fee-calculator'
+    | '/tools/freelance-currency-converter'
     | '/tools/freelance-day-rate-calculator'
     | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
@@ -378,6 +410,7 @@ export interface FileRouteTypes {
     | '/tools/freelance-tax-set-aside-calculator'
     | '/tools/invoice-late-fee-calculator'
     | '/tools/payment-processing-fee-calculator'
+    | '/tools/paypal-fee-calculator'
     | '/tools/project-quote-calculator'
     | '/tools/rate-increase-calculator'
     | '/tools/retainer-pricing-calculator'
@@ -401,11 +434,13 @@ export interface FileRouteTypes {
     | '/guides/how-to-price-a-fixed-bid-project'
     | '/guides/how-to-set-your-freelance-rate'
     | '/tools/annual-income-to-hourly-rate-calculator'
+    | '/tools/billable-hours-calculator'
     | '/tools/billable-utilization-rate-calculator'
     | '/tools/client-discount-calculator'
     | '/tools/currency-adjusted-rate-calculator'
     | '/tools/days-to-invoice-payment-calculator'
     | '/tools/fiverr-fee-calculator'
+    | '/tools/freelance-currency-converter'
     | '/tools/freelance-day-rate-calculator'
     | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
@@ -414,6 +449,7 @@ export interface FileRouteTypes {
     | '/tools/freelance-tax-set-aside-calculator'
     | '/tools/invoice-late-fee-calculator'
     | '/tools/payment-processing-fee-calculator'
+    | '/tools/paypal-fee-calculator'
     | '/tools/project-quote-calculator'
     | '/tools/rate-increase-calculator'
     | '/tools/retainer-pricing-calculator'
@@ -437,11 +473,13 @@ export interface FileRouteTypes {
     | '/guides/how-to-price-a-fixed-bid-project'
     | '/guides/how-to-set-your-freelance-rate'
     | '/tools/annual-income-to-hourly-rate-calculator'
+    | '/tools/billable-hours-calculator'
     | '/tools/billable-utilization-rate-calculator'
     | '/tools/client-discount-calculator'
     | '/tools/currency-adjusted-rate-calculator'
     | '/tools/days-to-invoice-payment-calculator'
     | '/tools/fiverr-fee-calculator'
+    | '/tools/freelance-currency-converter'
     | '/tools/freelance-day-rate-calculator'
     | '/tools/freelance-emergency-fund-calculator'
     | '/tools/freelance-hourly-rate-calculator'
@@ -450,6 +488,7 @@ export interface FileRouteTypes {
     | '/tools/freelance-tax-set-aside-calculator'
     | '/tools/invoice-late-fee-calculator'
     | '/tools/payment-processing-fee-calculator'
+    | '/tools/paypal-fee-calculator'
     | '/tools/project-quote-calculator'
     | '/tools/rate-increase-calculator'
     | '/tools/retainer-pricing-calculator'
@@ -474,11 +513,13 @@ export interface RootRouteChildren {
   GuidesHowToPriceAFixedBidProjectRoute: typeof GuidesHowToPriceAFixedBidProjectRoute
   GuidesHowToSetYourFreelanceRateRoute: typeof GuidesHowToSetYourFreelanceRateRoute
   ToolsAnnualIncomeToHourlyRateCalculatorRoute: typeof ToolsAnnualIncomeToHourlyRateCalculatorRoute
+  ToolsBillableHoursCalculatorRoute: typeof ToolsBillableHoursCalculatorRoute
   ToolsBillableUtilizationRateCalculatorRoute: typeof ToolsBillableUtilizationRateCalculatorRoute
   ToolsClientDiscountCalculatorRoute: typeof ToolsClientDiscountCalculatorRoute
   ToolsCurrencyAdjustedRateCalculatorRoute: typeof ToolsCurrencyAdjustedRateCalculatorRoute
   ToolsDaysToInvoicePaymentCalculatorRoute: typeof ToolsDaysToInvoicePaymentCalculatorRoute
   ToolsFiverrFeeCalculatorRoute: typeof ToolsFiverrFeeCalculatorRoute
+  ToolsFreelanceCurrencyConverterRoute: typeof ToolsFreelanceCurrencyConverterRoute
   ToolsFreelanceDayRateCalculatorRoute: typeof ToolsFreelanceDayRateCalculatorRoute
   ToolsFreelanceEmergencyFundCalculatorRoute: typeof ToolsFreelanceEmergencyFundCalculatorRoute
   ToolsFreelanceHourlyRateCalculatorRoute: typeof ToolsFreelanceHourlyRateCalculatorRoute
@@ -487,6 +528,7 @@ export interface RootRouteChildren {
   ToolsFreelanceTaxSetAsideCalculatorRoute: typeof ToolsFreelanceTaxSetAsideCalculatorRoute
   ToolsInvoiceLateFeeCalculatorRoute: typeof ToolsInvoiceLateFeeCalculatorRoute
   ToolsPaymentProcessingFeeCalculatorRoute: typeof ToolsPaymentProcessingFeeCalculatorRoute
+  ToolsPaypalFeeCalculatorRoute: typeof ToolsPaypalFeeCalculatorRoute
   ToolsProjectQuoteCalculatorRoute: typeof ToolsProjectQuoteCalculatorRoute
   ToolsRateIncreaseCalculatorRoute: typeof ToolsRateIncreaseCalculatorRoute
   ToolsRetainerPricingCalculatorRoute: typeof ToolsRetainerPricingCalculatorRoute
@@ -597,6 +639,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsAnnualIncomeToHourlyRateCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/billable-hours-calculator': {
+      id: '/tools/billable-hours-calculator'
+      path: '/tools/billable-hours-calculator'
+      fullPath: '/tools/billable-hours-calculator'
+      preLoaderRoute: typeof ToolsBillableHoursCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/billable-utilization-rate-calculator': {
       id: '/tools/billable-utilization-rate-calculator'
       path: '/tools/billable-utilization-rate-calculator'
@@ -630,6 +679,13 @@ declare module '@tanstack/react-router' {
       path: '/tools/fiverr-fee-calculator'
       fullPath: '/tools/fiverr-fee-calculator'
       preLoaderRoute: typeof ToolsFiverrFeeCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/freelance-currency-converter': {
+      id: '/tools/freelance-currency-converter'
+      path: '/tools/freelance-currency-converter'
+      fullPath: '/tools/freelance-currency-converter'
+      preLoaderRoute: typeof ToolsFreelanceCurrencyConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/freelance-day-rate-calculator': {
@@ -686,6 +742,13 @@ declare module '@tanstack/react-router' {
       path: '/tools/payment-processing-fee-calculator'
       fullPath: '/tools/payment-processing-fee-calculator'
       preLoaderRoute: typeof ToolsPaymentProcessingFeeCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/paypal-fee-calculator': {
+      id: '/tools/paypal-fee-calculator'
+      path: '/tools/paypal-fee-calculator'
+      fullPath: '/tools/paypal-fee-calculator'
+      preLoaderRoute: typeof ToolsPaypalFeeCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/project-quote-calculator': {
@@ -757,6 +820,7 @@ const rootRouteChildren: RootRouteChildren = {
   GuidesHowToSetYourFreelanceRateRoute: GuidesHowToSetYourFreelanceRateRoute,
   ToolsAnnualIncomeToHourlyRateCalculatorRoute:
     ToolsAnnualIncomeToHourlyRateCalculatorRoute,
+  ToolsBillableHoursCalculatorRoute: ToolsBillableHoursCalculatorRoute,
   ToolsBillableUtilizationRateCalculatorRoute:
     ToolsBillableUtilizationRateCalculatorRoute,
   ToolsClientDiscountCalculatorRoute: ToolsClientDiscountCalculatorRoute,
@@ -765,6 +829,7 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsDaysToInvoicePaymentCalculatorRoute:
     ToolsDaysToInvoicePaymentCalculatorRoute,
   ToolsFiverrFeeCalculatorRoute: ToolsFiverrFeeCalculatorRoute,
+  ToolsFreelanceCurrencyConverterRoute: ToolsFreelanceCurrencyConverterRoute,
   ToolsFreelanceDayRateCalculatorRoute: ToolsFreelanceDayRateCalculatorRoute,
   ToolsFreelanceEmergencyFundCalculatorRoute:
     ToolsFreelanceEmergencyFundCalculatorRoute,
@@ -778,6 +843,7 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsInvoiceLateFeeCalculatorRoute: ToolsInvoiceLateFeeCalculatorRoute,
   ToolsPaymentProcessingFeeCalculatorRoute:
     ToolsPaymentProcessingFeeCalculatorRoute,
+  ToolsPaypalFeeCalculatorRoute: ToolsPaypalFeeCalculatorRoute,
   ToolsProjectQuoteCalculatorRoute: ToolsProjectQuoteCalculatorRoute,
   ToolsRateIncreaseCalculatorRoute: ToolsRateIncreaseCalculatorRoute,
   ToolsRetainerPricingCalculatorRoute: ToolsRetainerPricingCalculatorRoute,

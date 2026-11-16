@@ -7,9 +7,9 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/tools/client-discount-calculator")({
   head: () => ({
     meta: [
-      { title: "Freelance Discount Impact Calculator — Free | FreelanceRate" },
-      { name: "description", content: "See what a client discount really costs: lost fee, reduced effective hourly rate, and the extra work needed to make it back." },
-      { property: "og:title", content: "Freelance Discount Impact Calculator" },
+      { title: "What Does a 15% Discount Really Cost You? | FreelanceRate" },
+      { name: "description", content: "A 15% discount can wipe out a third of your profit. See what a client discount really costs in lost fees and free hours — before you agree to it." },
+      { property: "og:title", content: "What Does a 15% Discount Really Cost You?" },
       { property: "og:description", content: "How many extra hours a 'small' discount really costs you." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

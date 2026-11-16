@@ -8,12 +8,12 @@ export const Route = createFileRoute("/tools/invoice-late-fee-calculator")({
   head: () => ({
     meta: [
       {
-        title: "Late Fee Calculator for Invoices (Free) | FreelanceRate",
+        title: "How to Calculate Late Fees on Invoices | FreelanceRate",
       },
       {
         name: "description",
         content:
-          "Free late fee calculator for overdue invoices. Enter the amount, days late and a monthly or daily rate to get the fee, the new total and a ready-to-send reminder email.",
+          "How to calculate late fees on invoices: outstanding amount × monthly rate × months late. Free calculator with a ready-to-send reminder email.",
       },
     ],
   }),
@@ -168,7 +168,7 @@ The important part is agreeing to the late-fee terms before the work begins and 
       ]}
       faqs={[
         {
-          q: "How do I calculate a late fee on an invoice?",
+          q: "How do I calculate late fees on invoices?",
           a: "Multiply the outstanding invoice amount by the agreed late-fee percentage, then prorate it for the number of days overdue when the agreement uses a monthly rate. For example, a monthly rate can be calculated as invoice amount × rate ÷ 100 × days overdue ÷ 30.",
         },
         {
@@ -189,6 +189,7 @@ The important part is agreeing to the late-fee terms before the work begins and 
         },
       ]}
       related={[
+        "/tools/freelance-invoice-generator",
         "/tools/days-to-invoice-payment-calculator",
         "/tools/project-quote-calculator",
         "/tools/currency-adjusted-rate-calculator",

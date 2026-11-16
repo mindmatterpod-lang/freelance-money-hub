@@ -5,12 +5,12 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
   head: () => ({
     meta: [
       {
-        title: "Freelance Tax Rates by Country: How Much Do You Pay? | FreelanceRate",
+        title: "What Is the Tax Rate for Freelancers? (2026) | FreelanceRate",
       },
       {
         name: "description",
         content:
-          "How much tax do freelancers pay? Compare income tax and self-employment contributions in the US, UK, Canada, Australia, India and Pakistan, plus how much to set aside.",
+          "What is the tax rate for freelancers? No single rate — income tax plus self-employment contributions, often 15–30%+ all-in, compared by country.",
       },
     ],
   }),
@@ -25,6 +25,16 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
           h: "How much tax do freelancers pay?",
           body: (
             <>
+              <p>
+                <strong>
+                  Short answer: there is no single freelance tax rate. You pay
+                  income tax on your profit plus, in most countries, a
+                  self-employment or social-insurance contribution on top —
+                  all-in, most freelancers land somewhere around 15–30%+ of
+                  profit, depending on the country.
+                </strong>
+              </p>
+
               <p>
                 There is no single freelance tax rate that applies to everyone.
                 The amount you pay depends on your country, income, deductible
@@ -142,6 +152,15 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
               </p>
 
               <p>
+                In practice, a Canadian freelancer files an annual T1 return
+                reporting net business income, pays federal and provincial
+                income tax on it, pays CPP on net self-employment earnings,
+                and usually pays quarterly instalments once the balance owing
+                is large enough — the tax is not withheld from client payments
+                the way an employer withholds it from a salary.
+              </p>
+
+              <p>
                 Quebec has a separate pension system, so freelancers there
                 should use the applicable provincial rules.
               </p>
@@ -216,6 +235,15 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
                 records of invoices, payment receipts, bank transactions, and
                 business expenses. These records can make tax reporting much
                 easier.
+              </p>
+
+              <p>
+                We cover Pakistan in detail in our guide to{" "}
+                <Link to="/blog/freelance-taxes-in-pakistan">
+                  freelance taxes in Pakistan
+                </Link>{" "}
+                — including the low final tax on IT export income, filer vs
+                non-filer, and how to file on FBR&apos;s IRIS portal.
               </p>
 
               <p>
@@ -361,6 +389,14 @@ export const Route = createFileRoute("/guides/freelance-tax-basics-by-country")(
         {
           q: "Is freelance income taxed differently from a salary?",
           a: "Usually, yes. As a freelancer you're generally taxed on your net profit (what's left after deducting legitimate business expenses) rather than gross pay, and in many countries you're also responsible for a self-employment or social-insurance contribution that an employer would otherwise share or cover for a salaried worker.",
+        },
+        {
+          q: "How do freelancers pay taxes in Canada?",
+          a: "Canadian freelancers report net business income on their annual T1 tax return and pay federal and provincial income tax on it, plus CPP contributions of 11.9% on net self-employment earnings in 2026 (both the employee and employer halves). Many also pay quarterly instalments. Quebec has its own pension plan (QPP) instead of CPP.",
+        },
+        {
+          q: "How much tax should a freelancer set aside?",
+          a: "A common starting rule is 20–30% of profit, but it varies a lot by country — in Pakistan, IT export income can be taxed at a 0.25–1% final rate, while in the US you may owe 15.3% self-employment tax on top of income tax. Use our Self-Employment Tax Estimator or Tax Set-Aside Calculator for a country-specific starting figure, then confirm with a local accountant.",
         },
       ]}
     />
